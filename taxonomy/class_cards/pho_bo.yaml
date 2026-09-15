@@ -1,0 +1,39 @@
+id: pho_bo
+
+name_vi: "Phở bò"
+name_en: "Beef pho"
+
+parent:
+  - noodle_dish
+  - pho
+
+aliases:
+  - "phở bò"
+  - "pho bo"
+  - "beef pho"
+
+definition: >
+  Vietnamese noodle dish consisting of flat rice noodles (bánh phở),
+  clear beef broth, sliced beef, topped with scallions and cilantro.
+
+visual_cues:
+  - flat white rice noodles
+  - clear or rich beef broth
+  - beef slices (tái, chín, nạm, gầu, gân)
+  - bowl presentation
+  - scallions and coriander toppings
+
+hard_negatives:
+  - pho_ga
+  - bun_bo_hue
+  - hu_tieu
+
+annotation:
+  include:
+    - main_noodle_bowl
+  exclude:
+    - side_herb_plate
+    - lime_and_chili_plate
+    - dipping_sauce_dish
+
+status: active

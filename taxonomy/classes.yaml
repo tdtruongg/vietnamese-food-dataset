@@ -1,0 +1,93 @@
+version: "1.0"
+
+classes:
+  - id: pho_bo
+    name_vi: "Phở bò"
+    name_en: "Beef pho"
+    parent: pho
+    family: noodle_dish
+    status: active
+
+  - id: pho_ga
+    name_vi: "Phở gà"
+    name_en: "Chicken pho"
+    parent: pho
+    family: noodle_dish
+    status: active
+
+  - id: pho_chay
+    name_vi: "Phở chay"
+    name_en: "Vegetarian pho"
+    parent: pho
+    family: noodle_dish
+    status: active
+
+  - id: bun_bo_hue
+    name_vi: "Bún bò Huế"
+    name_en: "Bun bo Hue"
+    parent: bun
+    family: noodle_dish
+    status: active
+
+  - id: bun_rieu
+    name_vi: "Bún riêu"
+    name_en: "Crab rice noodle soup"
+    parent: bun
+    family: noodle_dish
+    status: active
+
+  - id: bun_cha
+    name_vi: "Bún chả"
+    name_en: "Bun cha"
+    parent: bun
+    family: noodle_dish
+    status: active
+
+  - id: bun_dau_mam_tom
+    name_vi: "Bún đậu mắm tôm"
+    name_en: "Rice vermicelli with fried tofu and shrimp paste"
+    parent: bun
+    family: noodle_dish
+    status: active
+
+  - id: hu_tieu_nam_vang
+    name_vi: "Hủ tiếu Nam Vang"
+    name_en: "Phnom Penh style noodle soup"
+    parent: hu_tieu
+    family: noodle_dish
+    status: active
+
+  - id: com_tam_suon_bi_cha
+    name_vi: "Cơm tấm sườn bì chả"
+    name_en: "Broken rice with pork chops, shredded pork skin and egg loaf"
+    parent: com_tam
+    family: rice_dish
+    status: active
+
+  - id: com_ga_hoi_an
+    name_vi: "Cơm gà Hội An"
+    name_en: "Hoi An style chicken rice"
+    parent: com_ga
+    family: rice_dish
+    status: active
+
+  - id: banh_mi_thit
+    name_vi: "Bánh mì thịt"
+    name_en: "Pork banh mi"
+    parent: banh_mi
+    family: bread_and_pastry
+    status: active
+
+  - id: banh_xeo
+    name_vi: "Bánh xèo"
+    name_en: "Vietnamese savory pancake"
+    parent: bread_and_pastry
+    family: bread_and_pastry
+    status: active
+
+  - id: banh_cuon
+    name_vi: "Bánh cuốn"
+    name_en: "Steamed rice rolls"
+    parent: bread_and_pastry
+    family: bread_and_pastry
+    status: active

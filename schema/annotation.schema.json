@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vietnamese Food Grounding Annotation Schema",
+  "description": "Validation schema for bounding box and text caption grounding annotations (ODVG format compatible)",
+  "type": "object",
+  "required": [
+    "image_id",
+    "file_name",
+    "width",
+    "height",
+    "detection"
+  ],
+  "properties": {
+    "image_id": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "detection": {
+      "type": "object",
+      "required": ["instances"],
+      "properties": {
+        "instances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["bbox", "label", "category_id"],
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": { "type": "number" },
+                "minItems": 4,
+                "maxItems": 4,
+                "description": "[x_min, y_min, x_max, y_max]"
+              },
+              "label": {
+                "type": "string",
+                "description": "Canonical or expression text label"
+              },
+              "category_id": {
+                "type": "integer"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "grounding_caption": {
+      "type": "string",
+      "description": "Natural language query or descriptive prompt for open-vocabulary detection"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+splits:
+  train:
+    ratio: 0.8
+    seed: 42
+  val:
+    ratio: 0.1
+    seed: 42
+  test:
+    ratio: 0.1
+    seed: 42
+
+stratify_by:
+  - canonical_class
+  - region

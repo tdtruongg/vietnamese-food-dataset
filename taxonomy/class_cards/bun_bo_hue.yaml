@@ -1,0 +1,35 @@
+id: bun_bo_hue
+
+name_vi: "Bún bò Huế"
+name_en: "Bun bo Hue"
+
+parent:
+  - noodle_dish
+  - bun
+
+aliases:
+  - "bún bò huế"
+  - "bun bo hue"
+  - "hue beef noodle"
+
+definition: >
+  Central Vietnamese spicy beef noodle soup containing thick cylindrical rice vermicelli,
+  spicy lemongrass broth, beef shank, pork knuckle, crab balls, and congealed pig blood.
+
+visual_cues:
+  - thick round rice vermicelli
+  - reddish spicy broth with chili oil and lemongrass
+  - beef shank slices, crab sausage (chả cua), pig trotter
+  - banana blossom toppings
+
+hard_negatives:
+  - pho_bo
+  - bun_rieu
+
+annotation:
+  include:
+    - main_noodle_bowl
+  exclude:
+    - side_vegetable_plate
+
+status: active

@@ -1,0 +1,4 @@
+source_id,image_id,source_type,source_url,creator,license,collection_date,notes
+SRC_000001,VNFOOD_000001,web,https://example.com/images/pho_bo_hanoi.jpg,unknown,Fair-Use-Research,2026-09-15,Initial pilot batch
+SRC_000002,VNFOOD_000002,web,https://example.com/images/bun_bo_hue.jpg,unknown,Fair-Use-Research,2026-09-15,Initial pilot batch
+SRC_000003,VNFOOD_000003,field_photo,local_camera,collector_01,CC-BY-4.0,2026-09-15,Field capture Saigon

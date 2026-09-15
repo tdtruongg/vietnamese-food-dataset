@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vietnamese Food Source Metadata Schema",
+  "description": "Validation schema for tracking image sources, authorship, and licensing provenance",
+  "type": "object",
+  "required": [
+    "source_id",
+    "image_id",
+    "source_type",
+    "license"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC_[0-9]{6}$"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["web", "flickr", "unsplash", "field_photo", "social_media"]
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "creator": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string",
+      "enum": ["CC-BY-4.0", "CC-BY-SA-4.0", "CC0", "Public-Domain", "Fair-Use-Research", "Unknown"]
+    },
+    "collection_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

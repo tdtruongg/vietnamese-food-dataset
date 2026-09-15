@@ -1,0 +1,3 @@
+review_id,image_id,reviewer,review_date,label_status,bbox_status,quality_status,notes
+REV_000001,VNFOOD_000001,reviewer_a,2026-09-15,verified,verified,good,Passes taxonomy check
+REV_000002,VNFOOD_000002,reviewer_a,2026-09-15,verified,verified,good,Passes taxonomy check

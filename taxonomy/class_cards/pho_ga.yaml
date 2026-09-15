@@ -1,0 +1,36 @@
+id: pho_ga
+
+name_vi: "Phở gà"
+name_en: "Chicken pho"
+
+parent:
+  - noodle_dish
+  - pho
+
+aliases:
+  - "phở gà"
+  - "pho ga"
+  - "chicken pho"
+
+definition: >
+  Vietnamese noodle dish made with flat rice noodles, clear chicken broth,
+  and shredded or sliced poached chicken meat with skin.
+
+visual_cues:
+  - flat white rice noodles
+  - golden clear chicken broth
+  - shredded/sliced chicken with yellow skin
+  - finely sliced lime leaves and scallions
+
+hard_negatives:
+  - pho_bo
+  - bun_ga
+
+annotation:
+  include:
+    - main_noodle_bowl
+  exclude:
+    - side_herbs
+    - condiments
+
+status: active

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vietnamese Food Image Metadata Schema",
+  "description": "Validation schema for Vietnamese food image dataset entries",
+  "type": "object",
+  "required": [
+    "image_id",
+    "canonical_class",
+    "domain",
+    "review_status"
+  ],
+  "properties": {
+    "image_id": {
+      "type": "string",
+      "pattern": "^VNFOOD_[0-9]{6}$",
+      "description": "Unique identifier for the image"
+    },
+    "canonical_class": {
+      "type": "string",
+      "description": "Canonical class ID from taxonomy/classes.yaml"
+    },
+    "food_family": {
+      "type": "string",
+      "description": "Parent category family"
+    },
+    "region": {
+      "type": "string",
+      "enum": ["northern", "north_central", "central_coast", "central_highlands", "southeastern", "mekong_delta", "unknown"]
+    },
+    "province": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["restaurant", "home_cooked", "street_food", "studio_photo", "social_media", "web"]
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["web_scrape", "user_upload", "synthetic", "field_collection"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["pending", "verified", "uncertain", "rejected"]
+    }
+  },
+  "additionalProperties": false
+}

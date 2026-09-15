@@ -1,0 +1,108 @@
+version: "1.0"
+
+taxonomy:
+  id: "vietnamese_food"
+  name_vi: "Ẩm thực Việt Nam"
+  name_en: "Vietnamese Cuisine"
+
+groups:
+  - id: noodle_dish
+    name_vi: "Món mì, bún, phở"
+    name_en: "Noodle dishes"
+    children:
+      - id: pho
+        name_vi: "Phở"
+        name_en: "Pho"
+        children:
+          - id: pho_bo
+            name_vi: "Phở bò"
+            name_en: "Beef pho"
+          - id: pho_ga
+            name_vi: "Phở gà"
+            name_en: "Chicken pho"
+          - id: pho_chay
+            name_vi: "Phở chay"
+            name_en: "Vegetarian pho"
+      - id: bun
+        name_vi: "Bún"
+        name_en: "Rice vermicelli dishes"
+        children:
+          - id: bun_bo_hue
+            name_vi: "Bún bò Huế"
+            name_en: "Bun bo Hue"
+          - id: bun_rieu
+            name_vi: "Bún riêu"
+            name_en: "Crab rice noodle soup"
+          - id: bun_cha
+            name_vi: "Bún chả"
+            name_en: "Bun cha"
+          - id: bun_dau_mam_tom
+            name_vi: "Bún đậu mắm tôm"
+            name_en: "Rice vermicelli with fried tofu and shrimp paste"
+      - id: hu_tieu
+        name_vi: "Hủ tiếu"
+        name_en: "Hu tieu"
+        children:
+          - id: hu_tieu_nam_vang
+            name_vi: "Hủ tiếu Nam Vang"
+            name_en: "Phnom Penh style noodle soup"
+          - id: hu_tieu_my_tho
+            name_vi: "Hủ tiếu Mỹ Tho"
+            name_en: "My Tho style noodle soup"
+      - id: mi_quang
+        name_vi: "Mỳ Quảng"
+        name_en: "Quang style noodles"
+        children:
+          - id: mi_quang_tomi
+            name_vi: "Mỳ Quảng tôm thịt"
+            name_en: "Quang noodles with pork and shrimp"
+
+  - id: rice_dish
+    name_vi: "Món cơm"
+    name_en: "Rice dishes"
+    children:
+      - id: com_tam
+        name_vi: "Cơm tấm"
+        name_en: "Broken rice"
+        children:
+          - id: com_tam_suon_bi_cha
+            name_vi: "Cơm tấm sườn bì chả"
+            name_en: "Broken rice with pork chops, shredded pork skin and egg loaf"
+      - id: com_ga
+        name_vi: "Cơm gà"
+        name_en: "Chicken rice"
+        children:
+          - id: com_ga_hoi_an
+            name_vi: "Cơm gà Hội An"
+            name_en: "Hoi An style chicken rice"
+      - id: com_chiên
+        name_vi: "Cơm chiên"
+        name_en: "Fried rice"
+        children:
+          - id: com_chien_duong_chau
+            name_vi: "Cơm chiên Dương Châu"
+            name_en: "Yangzhou fried rice"
+
+  - id: bread_and_pastry
+    name_vi: "Bánh mì và Bánh mặn"
+    name_en: "Bread and savory pastries"
+    children:
+      - id: banh_mi
+        name_vi: "Bánh mì"
+        name_en: "Banh mi"
+        children:
+          - id: banh_mi_thit
+            name_vi: "Bánh mì thịt"
+            name_en: "Pork banh mi"
+          - id: banh_mi_op_la
+            name_vi: "Bánh mì ốp la"
+            name_en: "Fried egg banh mi"
+          - id: banh_mi_xieu_mai
+            name_vi: "Bánh mì xíu mại"
+            name_en: "Meatball banh mi"
+      - id: banh_xeo
+        name_vi: "Bánh xèo"
+        name_en: "Vietnamese savory pancake"
+      - id: banh_cuon
+        name_vi: "Bánh cuốn"
+        name_en: "Steamed rice rolls"

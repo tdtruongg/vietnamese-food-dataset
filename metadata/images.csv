@@ -1,0 +1,4 @@
+image_id,file_path,canonical_class,food_family,region,province,city,domain,source_type,review_status
+VNFOOD_000001,data/raw/VNFOOD_000001.jpg,pho_bo,noodle_dish,northern,Hanoi,Hanoi,restaurant,web_scrape,verified
+VNFOOD_000002,data/raw/VNFOOD_000002.jpg,bun_bo_hue,noodle_dish,central_coast,Thua_Thien_Hue,Hue,restaurant,web_scrape,verified
+VNFOOD_000003,data/raw/VNFOOD_000003.jpg,com_tam_suon_bi_cha,rice_dish,southeastern,Ho_Chi_Minh,Ho_Chi_Minh,street_food,field_collection,pending

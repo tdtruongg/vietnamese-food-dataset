@@ -1,0 +1,32 @@
+version: "1.0"
+
+regions:
+  northern:
+    name_vi: "Miền Bắc"
+    name_en: "Northern Vietnam"
+    code: "VN-NORTH"
+
+  north_central:
+    name_vi: "Bắc Trung Bộ"
+    name_en: "North Central Vietnam"
+    code: "VN-NCENTRAL"
+
+  central_coast:
+    name_vi: "Duyên hải miền Trung"
+    name_en: "Central Coast"
+    code: "VN-CCOAST"
+
+  central_highlands:
+    name_vi: "Tây Nguyên"
+    name_en: "Central Highlands"
+    code: "VN-HIGHLANDS"
+
+  southeastern:
+    name_vi: "Đông Nam Bộ"
+    name_en: "Southeastern Vietnam"
+    code: "VN-SEAST"
+
+  mekong_delta:
+    name_vi: "Đồng bằng sông Cửu Long"
+    name_en: "Mekong Delta"
+    code: "VN-MEKONG"

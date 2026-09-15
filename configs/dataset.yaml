@@ -1,0 +1,34 @@
+name: vietnamese-food-dataset
+version: "1.0.0"
+task: grounding_and_open_vocabulary_detection
+num_classes: 13
+data_root: data/
+annotation_format: odvg_jsonl
+
+categories:
+  - id: 1
+    name: pho_bo
+  - id: 2
+    name: pho_ga
+  - id: 3
+    name: pho_chay
+  - id: 4
+    name: bun_bo_hue
+  - id: 5
+    name: bun_rieu
+  - id: 6
+    name: bun_cha
+  - id: 7
+    name: bun_dau_mam_tom
+  - id: 8
+    name: hu_tieu_nam_vang
+  - id: 9
+    name: com_tam_suon_bi_cha
+  - id: 10
+    name: com_ga_hoi_an
+  - id: 11
+    name: banh_mi_thit
+  - id: 12
+    name: banh_xeo
+  - id: 13
+    name: banh_cuon

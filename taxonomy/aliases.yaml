@@ -1,0 +1,74 @@
+version: "1.0"
+
+aliases:
+  pho_bo:
+    - "phở bò"
+    - "pho bo"
+    - "Pho Bo"
+    - "PHỞ BÒ"
+    - "beef pho"
+    - "vietnamese beef pho"
+
+  pho_ga:
+    - "phở gà"
+    - "pho ga"
+    - "Pho Ga"
+    - "PHỞ GÀ"
+    - "chicken pho"
+
+  bun_bo_hue:
+    - "bún bò huế"
+    - "bun bo hue"
+    - "Bun Bo Hue"
+    - "BÚN BÒ HUẾ"
+    - "hue style beef noodle"
+
+  bun_rieu:
+    - "bún riêu"
+    - "bun rieu"
+    - "Bun Rieu"
+    - "bún riêu cua"
+    - "crab noodle soup"
+
+  bun_cha:
+    - "bún chả"
+    - "bun cha"
+    - "Bun Cha"
+    - "bún chả hà nội"
+    - "hanoi grilled pork noodle"
+
+  bun_dau_mam_tom:
+    - "bún đậu mắm tôm"
+    - "bun dau mam tom"
+    - "bún đậu"
+    - "bun dau"
+
+  com_tam_suon_bi_cha:
+    - "cơm tấm sườn bì chả"
+    - "com tam suon bi cha"
+    - "cơm tấm"
+    - "com tam"
+    - "broken rice"
+
+  com_ga_hoi_an:
+    - "cơm gà hội an"
+    - "com ga hoi an"
+    - "hoi an chicken rice"
+
+  banh_mi_thit:
+    - "bánh mì thịt"
+    - "banh mi thit"
+    - "bánh mì"
+    - "banh mi"
+    - "vietnamese sandwich"
+
+  banh_xeo:
+    - "bánh xèo"
+    - "banh xeo"
+    - "vietnamese pancake"
+    - "crispy savory pancake"
+
+  banh_cuon:
+    - "bánh cuốn"
+    - "banh cuon"
+    - "steamed rice roll"
