@@ -31,3 +31,5 @@ All team documentation files in `docs/`:
 4. [`docs/roboflow_integration_guide.md`](file:///data/truongtd/LLMDet/vietnamese-food-dataset/docs/roboflow_integration_guide.md) — Hướng dẫn tự động tải & convert dataset Roboflow 8,385 ảnh.
 5. [`docs/post_finetuning_roadmap.md`](file:///data/truongtd/LLMDet/vietnamese-food-dataset/docs/post_finetuning_roadmap.md) — Lộ trình tối ưu hóa mô hình, Portion Estimation & Deploy Microservices.
 6. [`docs/workflow.md`](file:///data/truongtd/LLMDet/vietnamese-food-dataset/docs/workflow.md) — Quy trình phối hợp làm việc nhóm và đề xuất thay đổi Taxonomy.
+7. [`docs/metadata_nutrition_update_guide.md`](file:///data/truongtd/LLMDet/vietnamese-food-dataset/docs/metadata_nutrition_update_guide.md) — Báo cáo cập nhật Metadata `images.csv` & Database dinh dưỡng `food_nutrition_db.json`.
+
