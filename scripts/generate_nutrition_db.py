@@ -1,0 +1,646 @@
+#!/usr/bin/env python3
+"""
+Generate metadata/food_nutrition_db.json for all 51 Vietnamese food classes in format1/classes.txt.
+Contains serving references, nutritional information per 100g, main ingredients, and allergen info.
+"""
+
+import os
+import json
+
+# Comprehensive nutrition database mapping for all 51 Vietnamese food classes
+FOOD_NUTRITION_DATA = {
+    "bánh bèo": {
+        "id": 0,
+        "name_vi": "bánh bèo",
+        "name_en": "Water fern cake (Banh beo)",
+        "family": "bread_and_pastry",
+        "region_origin": ["central_coast"],
+        "serving_reference": {"small_portion_g": 150, "standard_portion_g": 250, "large_portion_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 135, "protein_g": 3.8, "carbohydrates_g": 24.2, "fat_g": 2.5, "fiber_g": 0.4, "sodium_mg": 380},
+        "ingredients_main": ["bột gạo", "tôm chà", "mỡ hành", "nước mắm chua ngọt", "da heo chiên giòn"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh bột lọc": {
+        "id": 1,
+        "name_vi": "bánh bột lọc",
+        "name_en": "Tapioca dumpling with shrimp & pork (Banh bot loc)",
+        "family": "bread_and_pastry",
+        "region_origin": ["central_coast"],
+        "serving_reference": {"small_portion_g": 150, "standard_portion_g": 250, "large_portion_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 165, "protein_g": 4.5, "carbohydrates_g": 28.1, "fat_g": 3.8, "fiber_g": 0.3, "sodium_mg": 410},
+        "ingredients_main": ["bột năng", "tôm đất", "thịt ba chỉ", "hành lá", "nước mắm"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh canh": {
+        "id": 2,
+        "name_vi": "bánh canh",
+        "name_en": "Thick noodle soup (Banh canh)",
+        "family": "noodle_dish",
+        "region_origin": ["southern", "central_coast"],
+        "serving_reference": {"small_bowl_g": 400, "standard_bowl_g": 500, "large_bowl_g": 650},
+        "nutrition_per_100g": {"calories_kcal": 78, "protein_g": 4.6, "carbohydrates_g": 10.8, "fat_g": 1.8, "fiber_g": 0.3, "sodium_mg": 430},
+        "ingredients_main": ["bánh canh bột gạo/lọc", "tôm", "cua/chả cá", "giò heo", "nước dùng"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh chưng": {
+        "id": 3,
+        "name_vi": "bánh chưng",
+        "name_en": "Square glutinous rice cake (Banh chung)",
+        "family": "bread_and_pastry",
+        "region_origin": ["northern"],
+        "serving_reference": {"small_slice_g": 150, "standard_slice_g": 250, "whole_cake_g": 1000},
+        "nutrition_per_100g": {"calories_kcal": 215, "protein_g": 5.2, "carbohydrates_g": 35.4, "fat_g": 5.8, "fiber_g": 1.1, "sodium_mg": 280},
+        "ingredients_main": ["gạo nếp", "đỗ xanh", "thịt ba chỉ", "lá dong", "hạt tiêu"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "bánh cuốn": {
+        "id": 4,
+        "name_vi": "bánh cuốn",
+        "name_en": "Steamed rice roll (Banh cuon)",
+        "family": "bread_and_pastry",
+        "region_origin": ["northern"],
+        "serving_reference": {"small_portion_g": 200, "standard_portion_g": 300, "large_portion_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 142, "protein_g": 4.1, "carbohydrates_g": 22.5, "fat_g": 3.9, "fiber_g": 0.6, "sodium_mg": 390},
+        "ingredients_main": ["bột gạo tráng mỏng", "thịt băm", "mộc nhĩ", "hành phi", "chả lụa", "nước mắm"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "bánh căn": {
+        "id": 5,
+        "name_vi": "bánh căn",
+        "name_en": "Mini pancake (Banh can)",
+        "family": "bread_and_pastry",
+        "region_origin": ["south_central_coast"],
+        "serving_reference": {"small_portion_g": 150, "standard_portion_g": 250, "large_portion_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 158, "protein_g": 5.8, "carbohydrates_g": 21.4, "fat_g": 5.5, "fiber_g": 0.5, "sodium_mg": 350},
+        "ingredients_main": ["bột gạo", "trứng cút/trứng gà", "tôm/mực", "mỡ hành", "nước mắm/nước xíu mại"],
+        "allergens": ["egg", "shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh giò": {
+        "id": 6,
+        "name_vi": "bánh giò",
+        "name_en": "Pyramid rice dumpling (Banh gio)",
+        "family": "bread_and_pastry",
+        "region_origin": ["northern"],
+        "serving_reference": {"standard_piece_g": 200, "large_piece_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 148, "protein_g": 4.8, "carbohydrates_g": 20.6, "fat_g": 5.1, "fiber_g": 0.7, "sodium_mg": 340},
+        "ingredients_main": ["bột gạo nếp", "thịt lợn băm", "mộc nhĩ", "nấm hương", "trứng cút"],
+        "allergens": ["egg"],
+        "confidence_level": "high"
+    },
+    "bánh khọt": {
+        "id": 7,
+        "name_vi": "bánh khọt",
+        "name_en": "Mini savory coconut pancake (Banh khot)",
+        "family": "bread_and_pastry",
+        "region_origin": ["southeastern"],
+        "serving_reference": {"small_portion_g": 150, "standard_portion_g": 250, "large_portion_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 175, "protein_g": 5.5, "carbohydrates_g": 23.2, "fat_g": 6.8, "fiber_g": 0.6, "sodium_mg": 370},
+        "ingredients_main": ["bột gạo", "nước cốt dừa", "tôm tươi", "mỡ hành", "rau sống", "nước mắm"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh mì": {
+        "id": 8,
+        "name_vi": "bánh mì",
+        "name_en": "Vietnamese baguette sandwich (Banh mi)",
+        "family": "bread_and_pastry",
+        "region_origin": ["southern", "nationwide"],
+        "serving_reference": {"half_loaf_g": 100, "standard_loaf_g": 180, "large_loaf_g": 250},
+        "nutrition_per_100g": {"calories_kcal": 245, "protein_g": 8.5, "carbohydrates_g": 34.0, "fat_g": 8.2, "fiber_g": 1.5, "sodium_mg": 520},
+        "ingredients_main": ["vỏ bánh mì", "pâté", "chả lụa", "thịt nguội", "dưa góp", "rau mùi", "nước sốt"],
+        "allergens": ["gluten", "egg"],
+        "confidence_level": "high"
+    },
+    "bánh pía": {
+        "id": 9,
+        "name_vi": "bánh pía",
+        "name_en": "Durian pastry cake (Banh pia)",
+        "family": "bread_and_pastry",
+        "region_origin": ["mekong_delta"],
+        "serving_reference": {"one_piece_g": 75, "two_pieces_g": 150},
+        "nutrition_per_100g": {"calories_kcal": 385, "protein_g": 6.2, "carbohydrates_g": 58.5, "fat_g": 14.5, "fiber_g": 1.8, "sodium_mg": 120},
+        "ingredients_main": ["bột mì nhiều lớp", "sầu riêng", "đậu xanh", "lòng đỏ trứng muối", "mỡ heo"],
+        "allergens": ["gluten", "egg"],
+        "confidence_level": "high"
+    },
+    "bánh tráng": {
+        "id": 10,
+        "name_vi": "bánh tráng",
+        "name_en": "Rice paper / Rice cracker (Banh trang)",
+        "family": "bread_and_pastry",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"sheet_g": 10, "snack_portion_g": 100},
+        "nutrition_per_100g": {"calories_kcal": 310, "protein_g": 3.2, "carbohydrates_g": 74.0, "fat_g": 0.8, "fiber_g": 0.8, "sodium_mg": 210},
+        "ingredients_main": ["bột gạo", "bột năng", "muối", "mè/vừng (tùy loại)"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "bánh tét": {
+        "id": 11,
+        "name_vi": "bánh tét",
+        "name_en": "Cylindrical glutinous rice cake (Banh tet)",
+        "family": "bread_and_pastry",
+        "region_origin": ["southern"],
+        "serving_reference": {"small_slice_g": 150, "standard_slice_g": 250},
+        "nutrition_per_100g": {"calories_kcal": 210, "protein_g": 4.8, "carbohydrates_g": 36.1, "fat_g": 5.2, "fiber_g": 1.0, "sodium_mg": 260},
+        "ingredients_main": ["gạo nếp", "đỗ xanh", "thịt lợn", "lá chuối"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "bánh xèo": {
+        "id": 12,
+        "name_vi": "bánh xèo",
+        "name_en": "Crispy Vietnamese crepe (Banh xeo)",
+        "family": "bread_and_pastry",
+        "region_origin": ["southern", "central_coast"],
+        "serving_reference": {"small_crepe_g": 150, "standard_crepe_g": 300, "large_crepe_g": 450},
+        "nutrition_per_100g": {"calories_kcal": 172, "protein_g": 6.1, "carbohydrates_g": 19.8, "fat_g": 7.4, "fiber_g": 1.2, "sodium_mg": 360},
+        "ingredients_main": ["bột gạo", "bột nghệ", "nước cốt dừa", "tôm", "thịt ba chỉ", "giá đỗ", "rau sống"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bánh đúc": {
+        "id": 13,
+        "name_vi": "bánh đúc",
+        "name_en": "Plain / Savory rice cake (Banh duc)",
+        "family": "bread_and_pastry",
+        "region_origin": ["northern"],
+        "serving_reference": {"standard_bowl_g": 250, "large_bowl_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 115, "protein_g": 3.2, "carbohydrates_g": 18.5, "fat_g": 3.1, "fiber_g": 0.4, "sodium_mg": 310},
+        "ingredients_main": ["bột gạo", "vôi trong", "thịt lợn băm", "mộc nhĩ", "hành phi", "nước mắm nóng"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "bún bò Huế": {
+        "id": 14,
+        "name_vi": "bún bò Huế",
+        "name_en": "Hue spicy beef noodle soup",
+        "family": "noodle_dish",
+        "region_origin": ["central_coast"],
+        "serving_reference": {"small_bowl_g": 450, "standard_bowl_g": 550, "large_bowl_g": 700},
+        "nutrition_per_100g": {"calories_kcal": 72, "protein_g": 4.8, "carbohydrates_g": 8.9, "fat_g": 2.1, "fiber_g": 0.5, "sodium_mg": 580},
+        "ingredients_main": ["bún sợi to", "bắp bò", "giò heo", "chả cua", "huyết", "sả", "mắm ruốc Huế"],
+        "allergens": ["shellfish", "fish"],
+        "confidence_level": "high"
+    },
+    "bún": {
+        "id": 15,
+        "name_vi": "bún",
+        "name_en": "Fresh rice vermicelli (Plain Bun)",
+        "family": "noodle_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 200, "plate_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 110, "protein_g": 1.7, "carbohydrates_g": 25.2, "fat_g": 0.3, "fiber_g": 0.4, "sodium_mg": 15},
+        "ingredients_main": ["gạo", "nước"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "bún mắm": {
+        "id": 16,
+        "name_vi": "bún mắm",
+        "name_en": "Fermented fish noodle soup (Bun mam)",
+        "family": "noodle_dish",
+        "region_origin": ["mekong_delta"],
+        "serving_reference": {"standard_bowl_g": 550, "large_bowl_g": 700},
+        "nutrition_per_100g": {"calories_kcal": 85, "protein_g": 5.8, "carbohydrates_g": 9.2, "fat_g": 2.8, "fiber_g": 0.8, "sodium_mg": 680},
+        "ingredients_main": ["bún tươi", "mắm cá linh/cá lóc", "tôm", "mực", "heo quay", "cà tím", "rau đắng"],
+        "allergens": ["fish", "shellfish"],
+        "confidence_level": "high"
+    },
+    "bún riêu": {
+        "id": 17,
+        "name_vi": "bún riêu",
+        "name_en": "Crab paste noodle soup (Bun rieu)",
+        "family": "noodle_dish",
+        "region_origin": ["northern", "nationwide"],
+        "serving_reference": {"standard_bowl_g": 500, "large_bowl_g": 650},
+        "nutrition_per_100g": {"calories_kcal": 68, "protein_g": 4.1, "carbohydrates_g": 8.5, "fat_g": 1.9, "fiber_g": 0.6, "sodium_mg": 460},
+        "ingredients_main": ["bún tươi", "riêu cua đồng", "cà chua", "đậu phụ chiên", "huyết", "giấm vốn"],
+        "allergens": ["shellfish"],
+        "confidence_level": "high"
+    },
+    "bún thịt nướng": {
+        "id": 18,
+        "name_vi": "bún thịt nướng",
+        "name_en": "Rice vermicelli with grilled pork",
+        "family": "noodle_dish",
+        "region_origin": ["southern", "central_coast"],
+        "serving_reference": {"standard_bowl_g": 400, "large_bowl_g": 550},
+        "nutrition_per_100g": {"calories_kcal": 135, "protein_g": 6.8, "carbohydrates_g": 17.5, "fat_g": 4.2, "fiber_g": 0.9, "sodium_mg": 420},
+        "ingredients_main": ["bún tươi", "thịt heo nướng", "chả giò", "đậu phụng", "mỡ hành", "nước mắm chua ngọt"],
+        "allergens": ["peanuts", "fish"],
+        "confidence_level": "high"
+    },
+    "bún đậu mắm tôm": {
+        "id": 19,
+        "name_vi": "bún đậu mắm tôm",
+        "name_en": "Rice noodle with fried tofu & shrimp paste",
+        "family": "noodle_dish",
+        "region_origin": ["northern"],
+        "serving_reference": {"standard_tray_g": 450, "large_tray_g": 650},
+        "nutrition_per_100g": {"calories_kcal": 145, "protein_g": 7.5, "carbohydrates_g": 15.2, "fat_g": 6.3, "fiber_g": 0.8, "sodium_mg": 590},
+        "ingredients_main": ["bún lá", "đậu phụ rán", "chả cốm", "thịt chân giò luộc", "dồi chần", "mắm tôm", "rau kinh giới"],
+        "allergens": ["shellfish", "soybeans"],
+        "confidence_level": "high"
+    },
+    "canh chua": {
+        "id": 20,
+        "name_vi": "canh chua",
+        "name_en": "Vietnamese sour soup (Canh chua)",
+        "family": "soup",
+        "region_origin": ["southern", "mekong_delta"],
+        "serving_reference": {"bowl_g": 350, "large_bowl_g": 500},
+        "nutrition_per_100g": {"calories_kcal": 42, "protein_g": 3.8, "carbohydrates_g": 4.2, "fat_g": 1.2, "fiber_g": 0.7, "sodium_mg": 380},
+        "ingredients_main": ["cá lóc/cá bông lau", "dứa/thơm", "cà chua", "giá đỗ", "bạc hà/dọc mùng", "nước me chua"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "cao lầu": {
+        "id": 21,
+        "name_vi": "cao lầu",
+        "name_en": "Hoi An Cao Lau noodles",
+        "family": "noodle_dish",
+        "region_origin": ["central_coast"],
+        "serving_reference": {"standard_bowl_g": 400, "large_bowl_g": 550},
+        "nutrition_per_100g": {"calories_kcal": 140, "protein_g": 6.5, "carbohydrates_g": 18.2, "fat_g": 4.5, "fiber_g": 0.8, "sodium_mg": 450},
+        "ingredients_main": ["sợi mì cao lầu ngâm tro", "thịt xá xíu", "ram chiên giòn", "nước sốt đậm đà", "rau đắng", "giá"],
+        "allergens": ["gluten", "soybeans"],
+        "confidence_level": "high"
+    },
+    "cháo lòng": {
+        "id": 22,
+        "name_vi": "cháo lòng",
+        "name_en": "Pork intestine rice porridge (Chao long)",
+        "family": "soup",
+        "region_origin": ["northern", "nationwide"],
+        "serving_reference": {"standard_bowl_g": 450, "large_bowl_g": 600},
+        "nutrition_per_100g": {"calories_kcal": 75, "protein_g": 4.9, "carbohydrates_g": 8.1, "fat_g": 2.7, "fiber_g": 0.3, "sodium_mg": 410},
+        "ingredients_main": ["gạo ninh cháo với nước dùng lòng", "huyết lợn", "lòng lợn", "gan", "dồi", "hành lá", "quẩy"],
+        "allergens": ["gluten"],
+        "confidence_level": "high"
+    },
+    "chả": {
+        "id": 23,
+        "name_vi": "chả",
+        "name_en": "Vietnamese pork roll / Sausage (Cha/Gio)",
+        "family": "meat_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"slice_g": 50, "portion_g": 150},
+        "nutrition_per_100g": {"calories_kcal": 210, "protein_g": 14.5, "carbohydrates_g": 3.2, "fat_g": 15.5, "fiber_g": 0.1, "sodium_mg": 620},
+        "ingredients_main": ["thịt nạc heo quết nhuyễn", "nước mắm", "bột năng", "hạt tiêu"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "cua": {
+        "id": 24,
+        "name_vi": "cua",
+        "name_en": "Cooked Crab (Cua)",
+        "family": "seafood",
+        "region_origin": ["coastal_regions"],
+        "serving_reference": {"meat_portion_g": 150, "whole_crab_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 98, "protein_g": 19.5, "carbohydrates_g": 0.0, "fat_g": 1.5, "fiber_g": 0.0, "sodium_mg": 320},
+        "ingredients_main": ["cua biển / cua đồng"],
+        "allergens": ["shellfish"],
+        "confidence_level": "high"
+    },
+    "cá chiên": {
+        "id": 25,
+        "name_vi": "cá chiên",
+        "name_en": "Fried fish (Ca chien)",
+        "family": "seafood",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"piece_g": 150, "whole_fish_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 185, "protein_g": 18.2, "carbohydrates_g": 2.1, "fat_g": 11.5, "fiber_g": 0.0, "sodium_mg": 290},
+        "ingredients_main": ["cá nguyên con/khúc", "dầu ăn", "gia vị ướp"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "cơm chiên": {
+        "id": 26,
+        "name_vi": "cơm chiên",
+        "name_en": "Fried rice (Com chien)",
+        "family": "rice_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"standard_plate_g": 350, "large_plate_g": 500},
+        "nutrition_per_100g": {"calories_kcal": 165, "protein_g": 4.5, "carbohydrates_g": 24.8, "fat_g": 5.6, "fiber_g": 0.7, "sodium_mg": 450},
+        "ingredients_main": ["cơm nguội", "trứng", "xúc xích/lạp xưởng", "cà rốt", "đậu hà lan", "dầu ăn"],
+        "allergens": ["egg"],
+        "confidence_level": "high"
+    },
+    "cơm tấm": {
+        "id": 27,
+        "name_vi": "cơm tấm",
+        "name_en": "Broken rice with grilled pork chop (Com tam)",
+        "family": "rice_dish",
+        "region_origin": ["southern", "southeastern"],
+        "serving_reference": {"standard_plate_g": 450, "large_plate_g": 600},
+        "nutrition_per_100g": {"calories_kcal": 168, "protein_g": 9.5, "carbohydrates_g": 22.3, "fat_g": 4.8, "fiber_g": 0.8, "sodium_mg": 510},
+        "ingredients_main": ["gạo tấm", "sườn nướng", "bì heo", "chả trứng", "mỡ hành", "nước mắm ngọt"],
+        "allergens": ["egg", "fish"],
+        "confidence_level": "high"
+    },
+    "gà luộc": {
+        "id": 28,
+        "name_vi": "gà luộc",
+        "name_en": "Boiled chicken (Ga luoc)",
+        "family": "meat_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 150, "quarter_chicken_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 165, "protein_g": 20.5, "carbohydrates_g": 0.0, "fat_g": 9.2, "fiber_g": 0.0, "sodium_mg": 180},
+        "ingredients_main": ["thịt gà ta", "lá chanh", "muối tiêu chanh"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "gỏi": {
+        "id": 29,
+        "name_vi": "gỏi",
+        "name_en": "Vietnamese salad (Goi)",
+        "family": "salad_vegetable",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"standard_plate_g": 250, "large_plate_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 95, "protein_g": 5.2, "carbohydrates_g": 10.5, "fat_g": 3.5, "fiber_g": 2.1, "sodium_mg": 390},
+        "ingredients_main": ["ngó sen/đu đủ/bắp cải", "tôm/thịt gà/tai heo", "rau thơm", "đậu phụng", "nước mắm chua ngọt"],
+        "allergens": ["peanuts", "fish", "shellfish"],
+        "confidence_level": "high"
+    },
+    "gỏi cuốn": {
+        "id": 30,
+        "name_vi": "gỏi cuốn",
+        "name_en": "Fresh spring rolls (Goi cuon)",
+        "family": "bread_and_pastry",
+        "region_origin": ["southern", "nationwide"],
+        "serving_reference": {"one_roll_g": 60, "three_rolls_g": 180},
+        "nutrition_per_100g": {"calories_kcal": 115, "protein_g": 6.8, "carbohydrates_g": 17.2, "fat_g": 2.1, "fiber_g": 1.1, "sodium_mg": 320},
+        "ingredients_main": ["bánh tráng", "tôm luộc", "thịt ba chỉ", "bún tươi", "hẹ", "rau sống", "tương đen/nước mắm"],
+        "allergens": ["shellfish", "peanuts", "soybeans"],
+        "confidence_level": "high"
+    },
+    "heo quay": {
+        "id": 31,
+        "name_vi": "heo quay",
+        "name_en": "Roasted pork belly (Heo quay)",
+        "family": "meat_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 150, "plate_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 330, "protein_g": 14.8, "carbohydrates_g": 1.5, "fat_g": 29.5, "fiber_g": 0.0, "sodium_mg": 480},
+        "ingredients_main": ["thịt ba chỉ heo", "húng lìu / ngũ vị hương", "muối", "giấm"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "hàu": {
+        "id": 32,
+        "name_vi": "hàu",
+        "name_en": "Oysters (Hau)",
+        "family": "seafood",
+        "region_origin": ["coastal_regions"],
+        "serving_reference": {"meat_portion_g": 150, "six_oysters_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 68, "protein_g": 7.1, "carbohydrates_g": 3.9, "fat_g": 2.4, "fiber_g": 0.0, "sodium_mg": 210},
+        "ingredients_main": ["hàu tươi", "mỡ hành / phô mai"],
+        "allergens": ["shellfish", "milk"],
+        "confidence_level": "high"
+    },
+    "hủ tiếu": {
+        "id": 33,
+        "name_vi": "hủ tiếu",
+        "name_en": "Hu Tieu noodle soup",
+        "family": "noodle_dish",
+        "region_origin": ["southern", "mekong_delta"],
+        "serving_reference": {"standard_bowl_g": 450, "large_bowl_g": 600},
+        "nutrition_per_100g": {"calories_kcal": 74, "protein_g": 4.5, "carbohydrates_g": 10.2, "fat_g": 1.7, "fiber_g": 0.4, "sodium_mg": 440},
+        "ingredients_main": ["hủ tiếu dai/mềm", "thịt heo băm", "tôm", "gan heo", "trứng cút", "hẹ", "cần tây"],
+        "allergens": ["shellfish", "egg"],
+        "confidence_level": "high"
+    },
+    "lẩu": {
+        "id": 34,
+        "name_vi": "lẩu",
+        "name_en": "Hotpot (Lau)",
+        "family": "soup",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"per_person_portion_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 85, "protein_g": 6.8, "carbohydrates_g": 5.4, "fat_g": 3.9, "fiber_g": 1.2, "sodium_mg": 520},
+        "ingredients_main": ["nước dùng lẩu", "hải sản / thịt bò / gà", "nấm", "các loại rau nhúng", "bún/mì"],
+        "allergens": ["fish", "shellfish"],
+        "confidence_level": "high"
+    },
+    "mì Quảng": {
+        "id": 35,
+        "name_vi": "mì Quảng",
+        "name_en": "Quang Nam rice noodles",
+        "family": "noodle_dish",
+        "region_origin": ["central_coast"],
+        "serving_reference": {"standard_bowl_g": 400, "large_bowl_g": 550},
+        "nutrition_per_100g": {"calories_kcal": 128, "protein_g": 5.9, "carbohydrates_g": 16.5, "fat_g": 4.3, "fiber_g": 0.9, "sodium_mg": 410},
+        "ingredients_main": ["sợi mì Quảng", "tôm", "thịt heo", "trứng cút", "bánh tráng nướng", "đậu phụng", "nước dùng sệt"],
+        "allergens": ["shellfish", "peanuts", "egg"],
+        "confidence_level": "high"
+    },
+    "mực": {
+        "id": 36,
+        "name_vi": "mực",
+        "name_en": "Squid / Calamari (Muc)",
+        "family": "seafood",
+        "region_origin": ["coastal_regions"],
+        "serving_reference": {"portion_g": 150, "plate_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 92, "protein_g": 15.6, "carbohydrates_g": 3.1, "fat_g": 1.4, "fiber_g": 0.0, "sodium_mg": 260},
+        "ingredients_main": ["mực tươi (hấp/nướng/xào)"],
+        "allergens": ["shellfish"],
+        "confidence_level": "high"
+    },
+    "nem chua": {
+        "id": 37,
+        "name_vi": "nem chua",
+        "name_en": "Fermented pork roll (Nem chua)",
+        "family": "meat_dish",
+        "region_origin": ["north_central", "northern"],
+        "serving_reference": {"one_piece_g": 30, "portion_g": 150},
+        "nutrition_per_100g": {"calories_kcal": 138, "protein_g": 16.5, "carbohydrates_g": 4.2, "fat_g": 6.1, "fiber_g": 0.2, "sodium_mg": 580},
+        "ingredients_main": ["thịt nạc heo mông", "bì heo thái sợi", "thính gạo", "tỏi", "ớt", "lá đinh lăng"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "ngao sò": {
+        "id": 38,
+        "name_vi": "ngao sò",
+        "name_en": "Clams and Shellfish (Ngao so)",
+        "family": "seafood",
+        "region_origin": ["coastal_regions"],
+        "serving_reference": {"portion_g": 200, "plate_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 74, "protein_g": 12.8, "carbohydrates_g": 2.6, "fat_g": 1.0, "fiber_g": 0.0, "sodium_mg": 290},
+        "ingredients_main": ["ngao / sò huyết / nghêu hấp sả"],
+        "allergens": ["shellfish"],
+        "confidence_level": "high"
+    },
+    "phở": {
+        "id": 39,
+        "name_vi": "phở",
+        "name_en": "Vietnamese beef/chicken pho",
+        "family": "noodle_dish",
+        "region_origin": ["northern", "nationwide"],
+        "serving_reference": {"small_bowl_g": 400, "standard_bowl_g": 500, "large_bowl_g": 650},
+        "nutrition_per_100g": {"calories_kcal": 67, "protein_g": 4.2, "carbohydrates_g": 9.1, "fat_g": 1.5, "fiber_g": 0.3, "sodium_mg": 420},
+        "ingredients_main": ["bánh phở", "thịt bò tái/nạm/gầu", "nước dùng xương", "hành tây", "hành lá"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "rau sống": {
+        "id": 40,
+        "name_vi": "rau sống",
+        "name_en": "Fresh herbs & salad platter (Rau song)",
+        "family": "salad_vegetable",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"plate_g": 150},
+        "nutrition_per_100g": {"calories_kcal": 22, "protein_g": 1.8, "carbohydrates_g": 3.6, "fat_g": 0.3, "fiber_g": 1.8, "sodium_mg": 18},
+        "ingredients_main": ["xà lách", "rau húng", "tía tô", "kinh giới", "giá đỗ", "dưa chuột"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "súp cua": {
+        "id": 41,
+        "name_vi": "súp cua",
+        "name_en": "Crab & egg drop soup (Sup cua)",
+        "family": "soup",
+        "region_origin": ["southern", "nationwide"],
+        "serving_reference": {"bowl_g": 300, "large_bowl_g": 450},
+        "nutrition_per_100g": {"calories_kcal": 58, "protein_g": 4.8, "carbohydrates_g": 5.2, "fat_g": 2.1, "fiber_g": 0.3, "sodium_mg": 380},
+        "ingredients_main": ["thịt cua", "trứng đánh", "bột năng", "nấm tuyết", "bắp hạt", "trứng cút"],
+        "allergens": ["shellfish", "egg"],
+        "confidence_level": "high"
+    },
+    "thịt bò": {
+        "id": 42,
+        "name_vi": "thịt bò",
+        "name_en": "Cooked Beef (Thit bo)",
+        "family": "meat_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 150, "plate_g": 250},
+        "nutrition_per_100g": {"calories_kcal": 215, "protein_g": 24.5, "carbohydrates_g": 0.0, "fat_g": 12.8, "fiber_g": 0.0, "sodium_mg": 75},
+        "ingredients_main": ["thịt bò (xào/nướng/luộc)"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "rau luộc": {
+        "id": 43,
+        "name_vi": "rau luộc",
+        "name_en": "Boiled vegetables (Rau luoc)",
+        "family": "salad_vegetable",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 200, "plate_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 28, "protein_g": 2.1, "carbohydrates_g": 4.8, "fat_g": 0.3, "fiber_g": 2.2, "sodium_mg": 25},
+        "ingredients_main": ["rau muống", "rau cải", "bầu", "su su", "khoai lang luộc"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "tôm": {
+        "id": 44,
+        "name_vi": "tôm",
+        "name_en": "Cooked Shrimp (Tom)",
+        "family": "seafood",
+        "region_origin": ["coastal_regions", "nationwide"],
+        "serving_reference": {"portion_g": 150, "plate_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 99, "protein_g": 20.5, "carbohydrates_g": 0.2, "fat_g": 1.2, "fiber_g": 0.0, "sodium_mg": 220},
+        "ingredients_main": ["tôm sú / tôm thẻ (hấp/nướng)"],
+        "allergens": ["shellfish"],
+        "confidence_level": "high"
+    },
+    "xôi xéo": {
+        "id": 45,
+        "name_vi": "xôi xéo",
+        "name_en": "Sticky rice with mung bean & fried shallots",
+        "family": "rice_dish",
+        "region_origin": ["northern"],
+        "serving_reference": {"standard_portion_g": 200, "large_portion_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 268, "protein_g": 5.8, "carbohydrates_g": 46.2, "fat_g": 7.2, "fiber_g": 1.8, "sodium_mg": 210},
+        "ingredients_main": ["gạo nếp đồ nghệ", "đậu xanh thái lát", "mỡ gà", "hành phi giòn", "ruốc/chả"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "ốc": {
+        "id": 46,
+        "name_vi": "ốc",
+        "name_en": "Cooked Snails (Oc)",
+        "family": "seafood",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 200, "plate_g": 400},
+        "nutrition_per_100g": {"calories_kcal": 84, "protein_g": 16.1, "carbohydrates_g": 2.0, "fat_g": 0.8, "fiber_g": 0.0, "sodium_mg": 180},
+        "ingredients_main": ["ốc hương / ốc mầm / ốc bươu (hấp sả/xào bơ tỏi)"],
+        "allergens": ["molluscs"],
+        "confidence_level": "high"
+    },
+    "món ăn khác": {
+        "id": 47,
+        "name_vi": "món ăn khác",
+        "name_en": "Other Vietnamese dishes / Miscellaneous",
+        "family": "other",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"standard_portion_g": 200},
+        "nutrition_per_100g": {"calories_kcal": 150, "protein_g": 6.0, "carbohydrates_g": 18.0, "fat_g": 5.0, "fiber_g": 1.0, "sodium_mg": 350},
+        "ingredients_main": ["món ăn chưa phân loại"],
+        "allergens": [],
+        "confidence_level": "low"
+    },
+    "rau xào": {
+        "id": 48,
+        "name_vi": "rau xào",
+        "name_en": "Stir-fried vegetables (Rau xao)",
+        "family": "salad_vegetable",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 200, "plate_g": 350},
+        "nutrition_per_100g": {"calories_kcal": 65, "protein_g": 2.4, "carbohydrates_g": 5.1, "fat_g": 4.2, "fiber_g": 2.1, "sodium_mg": 310},
+        "ingredients_main": ["rau muống xào tỏi", "rau cải xào", "dầu ăn", "tỏi"],
+        "allergens": [],
+        "confidence_level": "high"
+    },
+    "nước chấm": {
+        "id": 49,
+        "name_vi": "nước chấm",
+        "name_en": "Dipping sauce (Nuoc cham)",
+        "family": "sauce_condiment",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"small_bowl_g": 30, "standard_bowl_g": 50},
+        "nutrition_per_100g": {"calories_kcal": 78, "protein_g": 2.1, "carbohydrates_g": 16.5, "fat_g": 0.1, "fiber_g": 0.2, "sodium_mg": 1850},
+        "ingredients_main": ["nước mắm", "đường", "nước cốt chanh", "tỏi", "ớt", "nước lọc"],
+        "allergens": ["fish"],
+        "confidence_level": "high"
+    },
+    "gà quay": {
+        "id": 50,
+        "name_vi": "gà quay",
+        "name_en": "Roasted chicken (Ga quay)",
+        "family": "meat_dish",
+        "region_origin": ["nationwide"],
+        "serving_reference": {"portion_g": 150, "quarter_chicken_g": 300},
+        "nutrition_per_100g": {"calories_kcal": 220, "protein_g": 22.1, "carbohydrates_g": 1.2, "fat_g": 14.2, "fiber_g": 0.0, "sodium_mg": 410},
+        "ingredients_main": ["thịt gà quay", "mật ong / ngũ vị hương", "dầu ăn"],
+        "allergens": [],
+        "confidence_level": "high"
+    }
+}
+
+def main():
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    output_json_path = os.path.join(base_dir, 'metadata', 'food_nutrition_db.json')
+
+    db_structure = {
+        "version": "1.0",
+        "last_updated": "2026-09-25",
+        "unit_note": "nutritional values are per 100g edible portion",
+        "source": "Vietnamese Institute of Nutrition (2007) & USDA FoodData Central",
+        "total_classes": len(FOOD_NUTRITION_DATA),
+        "foods": FOOD_NUTRITION_DATA
+    }
+
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    with open(output_json_path, 'w', encoding='utf-8') as f:
+        json.dump(db_structure, f, ensure_ascii=False, indent=2)
+
+    print(f"[SUCCESS] Exported food nutrition DB ({len(FOOD_NUTRITION_DATA)} classes) to {output_json_path}")
+
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,1001 @@
-image_id,file_path,canonical_class,food_family,region,province,city,domain,source_type,review_status
-VNFOOD_000001,data/raw/VNFOOD_000001.jpg,pho_bo,noodle_dish,northern,Hanoi,Hanoi,restaurant,web_scrape,verified
-VNFOOD_000002,data/raw/VNFOOD_000002.jpg,bun_bo_hue,noodle_dish,central_coast,Thua_Thien_Hue,Hue,restaurant,web_scrape,verified
-VNFOOD_000003,data/raw/VNFOOD_000003.jpg,com_tam_suon_bi_cha,rice_dish,southeastern,Ho_Chi_Minh,Ho_Chi_Minh,street_food,field_collection,pending
+image_id,file_path,canonical_class,food_family,width,height,source_type,annotated,review_status
+VNFOOD_000001,images/srcA_H-000_jpg.rf.9b3c0354b6ea79e39d868d5d71f49079.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000002,images/srcA_H-001_jpg.rf.ea49db583598a718178ea42e637ab5ac.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000003,images/srcA_H-002_jpg.rf.631ea2c0aadeaba32633fa07445d6ec4.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000004,images/srcA_H-003_png.rf.d4f02e2aa94de318a31cfedb5fde0104.jpg,ngao sò,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000005,images/srcA_H-004_jpg.rf.e18f567c3afed2cb3f17491dac4ab805.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000006,images/srcA_H-005_jpg.rf.e3e8712d94597b542a6bfe28d7aae471.jpg,heo quay,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000007,images/srcA_H-006_jpg.rf.1d5bd3939a43c39859dacc3b2806beeb.jpg,gỏi,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000008,images/srcA_H-007_jpg.rf.0ca84175a22c721dfa8dcfc528442bec.jpg,ngao sò,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000009,images/srcA_H-008_jpg.rf.3defe255e39d813c40cbcee01e6a63ca.jpg,ốc,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000010,images/srcA_H-009_jpg.rf.11f9e6fee8ea6f1016167ae8495e9227.jpg,tôm,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000011,images/srcA_H-010_jpg.rf.f664af26ba9a8df4b9f165eaed8c18c8.jpg,mực,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000012,images/srcA_H-011_jpg.rf.addf69245d81cf6c2805821b93e7b756.jpg,tôm,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000013,images/srcA_H-012_jpg.rf.20093064d338224b22dab43c00197317.jpg,cua,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000014,images/srcA_H-013_jpg.rf.25089e96bb381520313bfdd7af853568.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000015,images/srcA_H-014_jpg.rf.0caceb88ce10781e4af9d9d48c6217cc.jpg,rau sống,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000016,images/srcA_H-015_jpg.rf.00f392b7bb318b7e5c118695b0ffa87c.jpg,tôm,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000017,images/srcA_H-016_jpg.rf.18183470157653a32c75009531aa6a75.jpg,mực,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000018,images/srcA_H-017_jpg.rf.310e26e1abbacd5750f2680bb9e5273d.jpg,tôm,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000019,images/srcA_H-018_jpg.rf.8484d42fe04261c18857c5ec1a24242d.jpg,rau sống,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000020,images/srcA_H-019_jpg.rf.95c95b2a4d75fd18c90571cfb6751e05.jpg,ngao sò,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000021,images/srcA_H-021_jpg.rf.769476f327ba7ba7c4e0750c400ca24e.jpg,tôm,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000022,images/srcA_H-022_jpg.rf.5ce347c46f0a08d3306e956dd27448f8.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000023,images/srcA_H-023_jpg.rf.623448004d4b8f46367347f189fe296c.jpg,hàu,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000024,images/srcA_H-024_jpg.rf.b8fa91a975acf0d5afbf222989aaf9cd.jpg,ốc,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000025,images/srcA_H-026_jpg.rf.5343afe10d751990a4f08d9dd6858324.jpg,ốc,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000026,images/srcA_H-053_jpg.rf.3c77d00f7e3b10ac0cd58d20e3d3dfb6.jpg,lẩu,soup,640,640,web_scrape_A,True,verified
+VNFOOD_000027,images/srcA_H-054_jpg.rf.74b133dfd4da6998306da8505d0221f4.jpg,lẩu,soup,640,640,web_scrape_A,True,verified
+VNFOOD_000028,images/srcA_H-055_jpg.rf.f273f108c4a6c72344454413a0714600.jpg,phở,noodle_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000029,images/srcA_H-056_jpg.rf.f997bd3ec2b4386711e5dc36a9f548bb.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_A,True,verified
+VNFOOD_000030,images/srcA_H-057_jpg.rf.a89b838b13e83e2b7719faa06395ceb5.jpg,heo quay,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000031,images/srcA_H-058_jpg.rf.75fb94eb91407b97c4f210a2cdbaa9c7.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000032,images/srcA_H-059_jpg.rf.3128112cdb6a77ead07b57a03f81ffb3.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000033,images/srcA_H-060_jpg.rf.ca5bcfe42edf39cd81fc095f699a59a3.jpg,cơm chiên,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000034,images/srcA_H-061_jpeg.rf.f092b7e45120195bd76fed8db8bceea9.jpg,canh chua,soup,640,640,web_scrape_A,True,verified
+VNFOOD_000035,images/srcA_H-062_jpg.rf.c5f656b07561d51b7dc9dcd4a52139a3.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000036,images/srcA_H-065_jpg.rf.481fa6a339309292dd846ee202f95836.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000037,images/srcA_H-066_jpg.rf.c5fc08ac051ce9c10b5e8acde7287b57.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000038,images/srcA_H-067_jpg.rf.e177572cc86d0d775159a3aa3aebd9f5.jpg,cơm chiên,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000039,images/srcA_H-068_jpg.rf.4a96f2efa2fe98665c0e8a49aff11a9f.jpg,rau sống,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000040,images/srcA_H-069_jpg.rf.8b2b6df86d40620e2197288c0c893d85.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000041,images/srcA_H-072_jpg.rf.a4bcd49c31dc7685cacadbc1312f3c70.jpg,chả,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000042,images/srcA_H-074_jpg.rf.9dbc799b63f1f4b8ce44b48d4a374981.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000043,images/srcA_H-075_jpg.rf.9400412ba2beba18a3a5f6a385d1cc8a.jpg,chả,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000044,images/srcA_H-079_jpg.rf.ad000b97d9d37e95de0ffaf79b71954d.jpg,ngao sò,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000045,images/srcA_H-081_jpg.rf.92fa432607cd8a8dde03fedff94c3543.jpg,canh chua,soup,640,640,web_scrape_A,True,verified
+VNFOOD_000046,images/srcA_H-082_jpg.rf.d77ff3db67402ca4131ff83ec079923c.jpg,rau sống,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000047,images/srcA_H-083_jpg.rf.b3de1d6e084faf84ebcd534fd7bafbe2.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000048,images/srcA_H-087_jpg.rf.20c859222fadf4d429c9115ca05b0f40.jpg,canh chua,soup,640,640,web_scrape_A,True,verified
+VNFOOD_000049,images/srcA_H-091_jpg.rf.d704ecfc7e1aae4897ee65a7a96444ef.jpg,rau xào,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000050,images/srcA_H-092_jpg.rf.4d0a05771177aa044833f53250bea7c4.jpg,mực,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000051,images/srcA_H-093_jpg.rf.785ee9cabd391da6cd0100e276cc7a66.jpg,rau xào,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000052,images/srcA_H-094_jpg.rf.b4a1639633e42d3c4865b3033f3e07c5.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000053,images/srcA_H-095_jpg.rf.c5ab029925c34ecae112867dabefb3f1.jpg,rau xào,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000054,images/srcA_H-096_jpeg.rf.b46f6427a8e55ba8b2e0f5ab39efbe2d.jpg,ốc,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000055,images/srcA_H-097_jpg.rf.f354f9faa5111d2d576f9c605a3a7045.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000056,images/srcA_H-099_jpg.rf.03f5e9ef6d44778186328703b60486f6.jpg,rau xào,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000057,images/srcA_H-100_jpg.rf.ff29a738f059f7e704f6c3860e027757.jpg,heo quay,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000058,images/srcA_H-103_jpg.rf.01c49d87932e274c27afb1a7a03b89cf.jpg,chả,meat_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000059,images/srcA_H-104_jpg.rf.abe716729a666f55b468cbe93ad7a06a.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000060,images/srcA_H-105_jpg.rf.79ad2fba0028fec6582bc5353ea8416a.jpg,ngao sò,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000061,images/srcA_H-106_jpg.rf.698052f8fd2636c5c8bd9e8c9413fd11.jpg,mực,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000062,images/srcA_H-107_jpg.rf.ac91f6b82a5cc4eb351cea86640e9122.jpg,rau luộc,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000063,images/srcA_H-108_JPG.rf.ffcece842962ecf19bb574144c2afb18.jpg,xôi xéo,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000064,images/srcA_H-109_jpg.rf.e702361a07a320b1d67a83dee8e9969b.jpg,rau luộc,salad_vegetable,640,640,web_scrape_A,True,verified
+VNFOOD_000065,images/srcA_H-110_JPG.rf.6ad94de30b09738bb64f6a5121909c44.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000066,images/srcA_H-112_jpg.rf.c59b36cab301b9ee21a70a1214301e45.jpg,cá chiên,seafood,640,640,web_scrape_A,True,verified
+VNFOOD_000067,images/srcA_H-113_jpg.rf.772c0a73d6cec4bf4529bfbc5bc45de1.jpg,xôi xéo,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000068,images/srcA_H-114_jpg.rf.f3c07661c32b888abf801428b2fc9319.jpg,món ăn khác,other,640,640,web_scrape_A,True,verified
+VNFOOD_000069,images/srcA_H-115_JPG.rf.c74d7cd2759e9689fbb12e4dfa8ed5fe.jpg,xôi xéo,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000070,images/srcA_H-116_jpg.rf.7fa90dc325083d3f34c6e543f1da939b.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_A,True,verified
+VNFOOD_000071,images/srcA_H-117_jpg.rf.f67157561740d5cae8e9c7d68e4611eb.jpg,xôi xéo,rice_dish,640,640,web_scrape_A,True,verified
+VNFOOD_000072,images/srcA_H-119_jpg.rf.18f41295675e9ac4139eea20df16718d.jpg,nước chấm,sauce_condiment,640,640,web_scrape_A,True,verified
+VNFOOD_000073,images/srcB_1004_jpg.rf.132ebbe30a7eb80d555a46a5a14751ce.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000074,images/srcB_1008_jpg.rf.59f8699bc276dfe33d4a48da4aead439.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000075,images/srcB_100_jpg.rf.17fea8ad667893d0f7994bab5868901e.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000076,images/srcB_100_jpg.rf.905768773c7ce1453089ceb502931f2b.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000077,images/srcB_1015_jpg.rf.9b3d4ef8bbc715ff7ae3bfd60f2dd571.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000078,images/srcB_1017_jpg.rf.9e9a41b8a757a58d834afaccef6c4fc4.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000079,images/srcB_101_jpg.rf.47f98ad94314971a8f1a4914d98032fe.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000080,images/srcB_101_jpg.rf.561025d118a2bf1ed6fdaa348f2e0791.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000081,images/srcB_1022_jpg.rf.eda9fa2ca134b6b70d1b2d620cc2686b.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000082,images/srcB_1028_jpg.rf.3d5010b7e72ea6ba12d7f6a65e05eb7a.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000083,images/srcB_102_jpg.rf.181b34c1ef23f583b66abe95ee351cc7.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000084,images/srcB_102_jpg.rf.429d4d427b640a1e760e6cfd5f2241c1.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000085,images/srcB_102_jpg.rf.6b00e168506b5c210a5c634e493bf72e.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000086,images/srcB_1030_jpg.rf.2432e5230636807065ddb7845f19600d.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000087,images/srcB_1034_jpg.rf.d0325ddef079c7b54b2198172b84bee3.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000088,images/srcB_1037_jpg.rf.02c203033bb731fd3e32138a690f8f75.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000089,images/srcB_1038_jpg.rf.bf539dd50cf645f8d32b9a6981c4b854.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000090,images/srcB_103_jpg.rf.01c090482415219167984bfeb4f3c5e8.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000091,images/srcB_103_jpg.rf.2b331356a2700e0f0a69d592edf677d4.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000092,images/srcB_103_jpg.rf.6683a2e66ba7bce54b36343a4c958389.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000093,images/srcB_103_jpg.rf.a8987d01123fa4d1a67296215e66fa51.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000094,images/srcB_1041_jpg.rf.411eabab2565b27060e7e1b8702f2f76.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000095,images/srcB_1042_jpg.rf.9f2837e7a30944d155432b3e94c8d892.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000096,images/srcB_1044_jpg.rf.8fc0fc5d18a249f827db9133df9ce225.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000097,images/srcB_104_jpg.rf.3dd576835e87f149a63b5d3e78dc5fe3.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000098,images/srcB_104_jpg.rf.cc4f0380737637160945d57cc34db935.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000099,images/srcB_1050_jpg.rf.a25e056d70f1430dc52d0cdb7d46d62d.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000100,images/srcB_1051_jpg.rf.d8465882fc8d18acd0d775420410c364.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000101,images/srcB_1052_jpg.rf.3ba9c7c53a96c6d74a5a3b9522750798.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000102,images/srcB_1053_jpg.rf.02cd9794c8813092385635a0182ee433.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000103,images/srcB_1053_jpg.rf.98c5eb4d16f5335ea4bea3486920d326.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000104,images/srcB_1053_jpg.rf.e0726eeb08e5470deb313c44e116ba96.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000105,images/srcB_1055_jpg.rf.22af40cbf9c710c63e6f2b188aa47057.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000106,images/srcB_1056_jpg.rf.589ad546b8fa10c78d1c07d83d053cdc.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000107,images/srcB_1060_jpg.rf.2defd30f86fc8b7ea26a9bbd36219ad3.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000108,images/srcB_1066_jpg.rf.0899dfa8032050aa87cbdd924114540c.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000109,images/srcB_1067_jpg.rf.7560ed491bc674fe13e7fb499f9c0907.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000110,images/srcB_1067_jpg.rf.fd1b1b88f4951ded8668b2184c6b229d.jpg,heo quay,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000111,images/srcB_1069_jpg.rf.c8c55512f486c2ce737476fb8628b9f9.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000112,images/srcB_106_jpg.rf.6ec7883401490bf31e28523ff938ede1.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000113,images/srcB_1071_jpg.rf.330822827b88a418dc32fa457b68b171.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000114,images/srcB_107_jpg.rf.aa797d758b22e988586a8742bac83c5b.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000115,images/srcB_107_jpg.rf.e669d8213883083896d490b017cf40fb.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000116,images/srcB_107_jpg.rf.ed8fe02d18416b02d77d98334ac0cb7a.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000117,images/srcB_1080_jpg.rf.eb3d09a232b12482a47751e7e573089a.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000118,images/srcB_1085_jpg.rf.e5d418d198d41f933858861fd1cd7e34.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000119,images/srcB_1086_jpg.rf.b7af5283928fe366939fe033c09c4888.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000120,images/srcB_108_jpg.rf.86ce305d8902ef226545b86efa2702c2.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000121,images/srcB_1091_jpg.rf.bc6b5edcbc4468903b182694fed0715d.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000122,images/srcB_1096_jpg.rf.020be0e23758dd962fbe9b8c831e50a0.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000123,images/srcB_1098_jpg.rf.496ce07dd9102815aca68193a8fdbd12.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000124,images/srcB_109_jpg.rf.6cd8ea45eb88aaf722cb5e67044e9e26.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000125,images/srcB_10_jpg.rf.840d7368b1f59e7345dba0e1389bf8c1.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000126,images/srcB_110_jpg.rf.5970b964441d7d1ed447e99715b1fa18.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000127,images/srcB_110_jpg.rf.60e9e75c04ffed5e5b687e6bfbf7ac98.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000128,images/srcB_111_jpg.rf.80c77faffd600bd618259f2bf24a93f9.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000129,images/srcB_1120_jpg.rf.6f401b0e58a6a404e8e48acfbd2e4f22.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000130,images/srcB_1128_jpg.rf.e5b6578ab5a609b81b91326d29ef9034.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000131,images/srcB_1131_jpg.rf.27cdb287cd95337f37c456a9f152995b.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000132,images/srcB_1138_jpg.rf.10db90ecdbe8a26b4c92957816e8598c.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000133,images/srcB_113_jpg.rf.1321c5c5bf7641d3f5210da682ee32e2.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000134,images/srcB_113_jpg.rf.681341df9b7835392aab96722bae2150.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000135,images/srcB_1147_jpg.rf.fc1f2022f8214acdbd55367390f2af26.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000136,images/srcB_114_jpg.rf.563f231c313a92c6ffbfdda4d91ddb37.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000137,images/srcB_114_jpg.rf.841c2d39e4f9c5c7d870c20ef36e5c4b.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000138,images/srcB_114_jpg.rf.b61d48d6130560b6dc01442d5c284e63.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000139,images/srcB_115_jpg.rf.250e30f47d5bc0d688335a2b9a61f8df.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000140,images/srcB_115_jpg.rf.cad703d400ebf09741f653a5607f3535.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000141,images/srcB_115_jpg.rf.edb04b44eb72f25d0619e8bca5e75a36.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000142,images/srcB_1167_jpg.rf.c9e1233254a2597f3d3570dabaa262fb.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000143,images/srcB_116_jpg.rf.1a1aba5fb1dc5e84b067a3fa29ff45c7.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000144,images/srcB_116_jpg.rf.497da33b4741d4733be7133280cb02e2.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000145,images/srcB_116_jpg.rf.abdb82f625b8838b67465cf138d08200.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000146,images/srcB_116_jpg.rf.da151e0876f4051c13f2d84db1c4e602.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000147,images/srcB_1172_jpg.rf.097c35a323497747df752c21fc436e3c.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000148,images/srcB_1178_jpg.rf.3266321ebe517c049301ace05c1944e9.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000149,images/srcB_117_jpg.rf.738a2631166c258f4a96a0487bca604e.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000150,images/srcB_118_jpg.rf.1b0c0ce9f311a9a956895a686fc15abc.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000151,images/srcB_1193_jpg.rf.63a40e0ff5c5e5e38aaff6a3e4aa07e9.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000152,images/srcB_1197_jpg.rf.95c9df98681047be86643d6b4fcd9218.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000153,images/srcB_119_jpg.rf.7e3b486518d2432f0a2e4da0a2ce3b9f.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000154,images/srcB_119_jpg.rf.968de06634f51094f4547fee86052e2a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000155,images/srcB_11_jpg.rf.051b72cbb8a5998959de95d80ecaa54c.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000156,images/srcB_120_jpg.rf.878e9a9dc9e2b440a62b6fcb109cd813.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000157,images/srcB_121_jpg.rf.c8ffb4d4551f615692f90a9df4f445f9.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000158,images/srcB_122_jpg.rf.89c9cabe2a3bb7f72a5dbc9119fd3107.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000159,images/srcB_1239_jpg.rf.f407bab53f25d39a6fa31a9bb89a382c.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000160,images/srcB_123_jpg.rf.9e68d9fc83538a5a9f18450ae28f4aa0.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000161,images/srcB_1254_jpg.rf.73dadb0763f243156d0c07dd0234a420.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000162,images/srcB_125_jpg.rf.56a7b86501c939db3b02de4609368fdf.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000163,images/srcB_127_jpg.rf.3d83db56ef8279a1a2eed33abf4d8b70.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000164,images/srcB_128_jpg.rf.876cb589361b07f27b1cf23e05226a3c.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000165,images/srcB_129_jpg.rf.cde85bf46f0387b381d12ac08f1523c5.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000166,images/srcB_12_jpg.rf.8a29b17fe0e0d3b2eb8201fc78baf533.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000167,images/srcB_130_jpg.rf.59e6f60df24430aaf3c40abad8c6aeda.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000168,images/srcB_130_jpg.rf.96893f89f27591449e970f120b0b94f4.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000169,images/srcB_132_jpg.rf.8fa158189d2429bc232aad17a3c8609c.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000170,images/srcB_132_jpg.rf.f04a0576f6d2dc1f051fc0093cf9087f.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000171,images/srcB_1339_jpg.rf.1b6d919940d745af73278e4b0270a220.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000172,images/srcB_133_jpg.rf.2af33aecff84defd37677406cd38ec39.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000173,images/srcB_133_jpg.rf.bc421ce5771e3686fde764d7c089c7ac.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000174,images/srcB_133_jpg.rf.e77b81b992ae5767869570678b1c67d2.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000175,images/srcB_1343_jpg.rf.c6d89d1223d25e07bb31554f89014a40.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000176,images/srcB_1346_jpg.rf.066de5a019f4fae1eb6dfae377354121.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000177,images/srcB_134_jpg.rf.e6e6323758d3fdf51503f60683454d88.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000178,images/srcB_135_jpg.rf.21fe1e00d1fbf841bba47029c6b21555.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000179,images/srcB_135_jpg.rf.43a8f41a9e3e63be392aff928af3027f.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000180,images/srcB_135_jpg.rf.af3fce6949acf987c84d52c6ab078de2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000181,images/srcB_136_jpg.rf.9cae516c25a26104dfc19c2443089c7a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000182,images/srcB_137_jpg.rf.2b36c5e7a6f1512ca19df63ea4ea8b33.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000183,images/srcB_137_jpg.rf.6afbc9e82961cd57a2562d79013e25a5.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000184,images/srcB_137_jpg.rf.97bde1df62f1a650785ae40b433802d3.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000185,images/srcB_137_jpg.rf.f4df4d3a9d9d8fe55f8ab5f08431db42.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000186,images/srcB_138_jpg.rf.0d13e3dcd22f11c6470c2ced1a9d1e9e.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000187,images/srcB_138_jpg.rf.37fae35a5b0ace58b752c28a38d278cc.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000188,images/srcB_138_jpg.rf.64fd6ac0dd6c73099a9e2ebeae169f9b.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000189,images/srcB_139_jpg.rf.528836854dad9bb2fce2296b6e9403a5.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000190,images/srcB_139_jpg.rf.8855d213894f87d49c352178a10ddaea.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000191,images/srcB_140_jpg.rf.38d9e8ec7e2c7bf7ede81f93442e5be6.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000192,images/srcB_140_jpg.rf.431f2893fdc080e589ca97db7dc79e09.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000193,images/srcB_140_jpg.rf.8a5e59cf903051add22a59b4b87fb075.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000194,images/srcB_140_jpg.rf.b285b410d159e36b24ea4edd6ac1e6ac.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000195,images/srcB_141_jpg.rf.39d5783d883ab4c71217bbe909d99cce.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000196,images/srcB_142_jpg.rf.6f7eef239ec12ddaef97aee914a4960b.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000197,images/srcB_143_jpg.rf.b30ff59b3dd89076c30ba91d93de8a29.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000198,images/srcB_1442_jpg.rf.9d4e78572a99ddcebab2358bcdeeef07.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000199,images/srcB_144_jpg.rf.6aacbda32e320d32df2fd4f935a41c5b.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000200,images/srcB_144_jpg.rf.fabf422864ad55b67887499415b0c52c.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000201,images/srcB_145_jpg.rf.106d1b2278b49c142cc5748ad2b4bf2e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000202,images/srcB_145_jpg.rf.fff69099af331f6457d813d1107bedd4.jpg,chả,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000203,images/srcB_146_jpg.rf.251e0ae638e608c3186966c24e90463d.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000204,images/srcB_147_jpg.rf.aaf0c3ac4f9a0299fb8edeeb1a8886fa.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000205,images/srcB_147_jpg.rf.f048d93f87c644a2adbf62cf8e355c61.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000206,images/srcB_148_jpg.rf.d18eb728ef9b20af82ede1e1bb35a8fb.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000207,images/srcB_149_jpg.rf.7a2aa0dafd4820b7c242ed6d0e1948de.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000208,images/srcB_150_jpg.rf.2ecbcdee33ed9545652ea9bc55607594.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000209,images/srcB_151_jpg.rf.94b5dda6efa5927b3ff8b3f1837e1b69.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000210,images/srcB_154_jpg.rf.1cf2fab8dcd7069092db57ae34093441.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000211,images/srcB_154_jpg.rf.374a598dc9a69dff486e9ce9257dd962.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000212,images/srcB_154_jpg.rf.3e4982fd5cef4cb74e9cf16b1390ffb6.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000213,images/srcB_154_jpg.rf.84ff9de0618e29818e464b5799a639fc.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000214,images/srcB_154_jpg.rf.fd022a5dc412d637e86e57a1f38180d1.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000215,images/srcB_156_jpg.rf.11c79873c3668fe53b10667f4cd499dd.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000216,images/srcB_156_jpg.rf.d06eec22c4d15fdb7752d60c2fa8ff99.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000217,images/srcB_157_jpg.rf.3e961b918039a4dc8b7d4b183ec394d6.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000218,images/srcB_159_jpg.rf.1a39be6849819c046801420f22a21616.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000219,images/srcB_159_jpg.rf.4c778dff85721be0483b56306c37afb2.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000220,images/srcB_159_jpg.rf.56bccc23c5f4076b454d370b6ca883da.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000221,images/srcB_160_jpg.rf.8fa4da6bf6b802e12e5f2f5241bdd5ae.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000222,images/srcB_160_jpg.rf.9680852904087fb153a2a8d8f19f10b4.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000223,images/srcB_160_jpg.rf.a6eb9e2e672ca59938b66af466ba741c.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000224,images/srcB_160_jpg.rf.d2329b854285f27d34a20bc5378ace05.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000225,images/srcB_161_jpg.rf.b17ea63fbdd66c5ead7466e51cd0cc65.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000226,images/srcB_162_jpg.rf.12c0c1842d38d07d3fc2e0c2b383de91.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000227,images/srcB_162_jpg.rf.51208a3432267a94b90c205f11e3410a.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000228,images/srcB_163_jpg.rf.43d0caebc885dbe4513ddb2079cce3cb.jpg,canh chua,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000229,images/srcB_164_jpg.rf.b47dc8911f5c81d4a17d4fd8ff39237b.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000230,images/srcB_165_jpg.rf.79df919d6a4acaf9c1ad2a8967f9e7d4.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000231,images/srcB_166_jpg.rf.2a50deed7ad80dfb12a639d8dbab7988.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000232,images/srcB_167_jpg.rf.13232015ba47a2070e4667b0e7839615.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000233,images/srcB_167_jpg.rf.217619a902ad20028d0cbbe54a35f92b.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000234,images/srcB_16_jpg.rf.0c7447c14fbf51d484eefcc609af9b1e.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000235,images/srcB_171_jpg.rf.8cbf58dc2f51dc1db146404726a549a1.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000236,images/srcB_171_jpg.rf.f13c12332870e18fa579d9ffdf0bc9f8.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000237,images/srcB_173_jpg.rf.2ef49893704e287e76bb61b7ddf60d54.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000238,images/srcB_175_jpg.rf.9790f3c83dcea63e9c29e0e91f37682b.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000239,images/srcB_176_jpg.rf.6f32927e0fff74f332dd0f4901c15383.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000240,images/srcB_177_jpg.rf.24bc5ad870583b478973d0ce10545eeb.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000241,images/srcB_177_jpg.rf.4b5dc5b3845923c467f5115de2213680.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000242,images/srcB_177_jpg.rf.8d48bea25a827c7fedd8c961cf8eaa5f.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000243,images/srcB_177_jpg.rf.d5bbbaa3463a1d5067617d558531b506.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000244,images/srcB_179_jpg.rf.75ccd606fefa699616907d84747d535f.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000245,images/srcB_17_jpg.rf.3227bb4575801c74aa9b92f251661548.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000246,images/srcB_180_jpg.rf.e0a4aaa095c1219ac3ee5e4c1afeab17.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000247,images/srcB_180_jpg.rf.f9c2821ae2514fd99a89c62be405c030.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000248,images/srcB_181_jpg.rf.18aead1f965ae8ea215a13ad0b02c10f.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000249,images/srcB_181_jpg.rf.987ef5fd0d07b029df299658197cb9f1.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000250,images/srcB_182_jpg.rf.4b3354d87c341b7507485296945e8e98.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000251,images/srcB_182_jpg.rf.65f82dfd9c09e28b11ccd00d8b52b78a.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000252,images/srcB_182_jpg.rf.e2012abc5faffae023aaeb23a8c6804d.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000253,images/srcB_183_jpg.rf.1cb91ad8078bdc76ec6df1187c7ebc6a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000254,images/srcB_183_jpg.rf.a65b8300473ce4a7c36e6a5c16a268e8.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000255,images/srcB_183_jpg.rf.de44f2acddb455923a2561beb37f849d.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000256,images/srcB_184_jpg.rf.148097c967bb35ce5914a5577e9c7c77.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000257,images/srcB_184_jpg.rf.a2aa8a9dc916b0936aa77cec87ded127.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000258,images/srcB_185_jpg.rf.9e42bf34e547568815ed112664f1b065.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000259,images/srcB_185_jpg.rf.ef55e2b7c5529449799e57fd74c7ae1f.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000260,images/srcB_186_jpg.rf.6874406615b6d432937c5a78487f46b3.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000261,images/srcB_187_jpg.rf.ecfe03052919b981da2caa16edae05e7.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000262,images/srcB_188_jpg.rf.660c0fd10f6c5524ed906b170f03bf20.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000263,images/srcB_188_jpg.rf.740fab065d13588b78c7970714fa3331.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000264,images/srcB_189_jpg.rf.57ac73d0191aeeb7cbf6c4c4a8ba01ba.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000265,images/srcB_18_jpg.rf.7632bf4b8843dabec59cb50463cb2822.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000266,images/srcB_18_jpg.rf.83814435b531da315d32596084fd6aa1.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000267,images/srcB_192_jpg.rf.02c0baf1655486f042c3d0069af125d3.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000268,images/srcB_192_jpg.rf.467e7684496c65c002fc6f4cc291fd19.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000269,images/srcB_192_jpg.rf.d3d5126bfa5e550e740f0245a28a3d7a.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000270,images/srcB_194_jpg.rf.c9e73c2dbee9d3d34ce7f7a2cc053df2.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000271,images/srcB_194_jpg.rf.df29721e84bdbbe97bf0d4a7bcf9ff02.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000272,images/srcB_195_jpg.rf.724d8cf6c7a15c181060806979023eb8.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000273,images/srcB_196_jpg.rf.ea6fdadc337c7d46837ea149f089f479.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000274,images/srcB_197_jpg.rf.0db0fed1ef21a38587165a7ce9cdc24a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000275,images/srcB_197_jpg.rf.9b411406d932cee874b0ae06cf0413e8.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000276,images/srcB_198_jpg.rf.ae593aa8b1f9940793c742b0e5c7cb6e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000277,images/srcB_19_jpg.rf.ad363335f86b9152c36572879ad959df.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000278,images/srcB_1_jpg.rf.c51d4fcff85810e5d90ae01a27e3673a.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000279,images/srcB_1_jpg.rf.c9ef6b8ec725855e3c17b22959f2354c.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000280,images/srcB_200_jpg.rf.3abe39db3ff4452d068e54a95224b34b.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000281,images/srcB_200_jpg.rf.e1fa7d0a1ca565643deabe701b7f5320.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000282,images/srcB_203_jpg.rf.e297a87acf9ab50b02f033391cd82eb7.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000283,images/srcB_203_jpg.rf.e8a8a3ff627c673effe6d41620930ccb.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000284,images/srcB_204_jpg.rf.54f1dfa8ff79a137705c31327ea63e5c.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000285,images/srcB_204_jpg.rf.78a290f79cf50783845881d9bdab3a25.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000286,images/srcB_204_jpg.rf.955555c4d0d49e212aee129a632edda0.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000287,images/srcB_204_jpg.rf.fd0777fd28dc967377adaac8f20d4094.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000288,images/srcB_205_jpg.rf.409d941745f5b1e2faf2f44957818715.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000289,images/srcB_205_jpg.rf.a215bfe882217bcb385dd58bb34f0b13.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000290,images/srcB_206_jpg.rf.20f68e5536e869ba3108a3bf20070bd2.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000291,images/srcB_206_jpg.rf.9891587ad34b1d5c7b3516fc32e7c252.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000292,images/srcB_207_jpg.rf.9bb07a33f8322555a4b9fcfe33a0bedb.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000293,images/srcB_208_jpg.rf.42bc0d193cfbdcfc5b5d2c2083c6b97f.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000294,images/srcB_208_jpg.rf.6c3723ef1bd0f7eef18c2f96904f8a76.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000295,images/srcB_209_jpg.rf.6d07cd0ae4e0488a8a6d8062d68ac3bf.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000296,images/srcB_20_jpg.rf.05547db47f4bb9b2c20572c73b4ad1d1.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000297,images/srcB_210_jpg.rf.184ef4f4b271c13ebe5e39e04009c9fa.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000298,images/srcB_210_jpg.rf.d9a17d18cf726e9cfe43602589f4c713.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000299,images/srcB_211_jpg.rf.98b79f3a559ead18102aa5b9843ce7b7.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000300,images/srcB_212_jpg.rf.66b64bdb5a1bcad44873c3ba671038cf.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000301,images/srcB_212_jpg.rf.d1d62e279b1482cfb409f21c3aff6b97.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000302,images/srcB_213_jpg.rf.8489c3be99cec429f57069b054a7b7c2.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000303,images/srcB_213_jpg.rf.dc7ac5bc01868dbf9fe308e04e1de351.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000304,images/srcB_214_jpg.rf.3dcb08d687e7496c67115749f04d0da1.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000305,images/srcB_216_jpg.rf.a03913e0488b31e2ad703aec2216dafe.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000306,images/srcB_217_jpg.rf.5b52679f6e7ef7e87e571f28ed7e45a2.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000307,images/srcB_21_jpg.rf.1340d9d41e11b3e7c821addc790f1854.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000308,images/srcB_21_jpg.rf.efcf0211ed9cb434f3937d3b754febf1.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000309,images/srcB_220_jpg.rf.ee9788005de329d3d573c012ad671f44.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000310,images/srcB_222_jpg.rf.462964ef4a9bd5cad0fec89c4d5cb593.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000311,images/srcB_222_jpg.rf.87dfd2574e7cbf1ed603caaae16eaac9.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000312,images/srcB_222_jpg.rf.de70673dde12e7f9472e85b60de4634b.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000313,images/srcB_223_jpg.rf.454b8700696d0f1e301456711aa0bb79.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000314,images/srcB_224_jpg.rf.cfb8a55b0f70bf0f789cb64bf6df0cf0.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000315,images/srcB_225_jpg.rf.41511a3bba23e01de1c9bc768f2159cf.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000316,images/srcB_228_jpg.rf.252e1bead74508823eb9a2655f533f86.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000317,images/srcB_229_jpg.rf.63f13ca7b07d19fdf09d1897501f168f.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000318,images/srcB_22_jpg.rf.2aa00d2eaed985b3fc6fc9091918d8a5.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000319,images/srcB_22_jpg.rf.9cb57bf5f14e695dd14440d8ba9c1049.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000320,images/srcB_230_jpg.rf.315594630c0b8ed701760b3e3fb7c5a3.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000321,images/srcB_231_jpg.rf.eb22e27ec0d5e6c82c2f9f86a149ed43.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000322,images/srcB_233_jpg.rf.045e738660fbf6804d7aa0c3c5db9d92.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000323,images/srcB_233_jpg.rf.9b5eda39d3d21eddc1bbe4ea64489d02.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000324,images/srcB_233_jpg.rf.fecd90c657ea1a427239ea85e99e3a4a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000325,images/srcB_236_jpg.rf.22577aedb195823be43cc8b5be508b13.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000326,images/srcB_236_jpg.rf.e0e7de2bfb762cdf87e47048527c2e0a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000327,images/srcB_237_jpg.rf.b707edadcc93055009a8a43da03cf87d.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000328,images/srcB_238_jpg.rf.7c8b8e77347f02b63ec57c8562ffc722.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000329,images/srcB_238_jpg.rf.8a636f446c3a9d5157ee3130c8a8fcad.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000330,images/srcB_23_jpg.rf.310cc949ceead0670083574006824af8.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000331,images/srcB_23_jpg.rf.6045cff171f903fb2760629cce6f1670.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000332,images/srcB_23_jpg.rf.9f2159a18f3b6eabc3c57410761afc0a.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000333,images/srcB_240_jpg.rf.e4e867b2123fde807c164bb8d8af4f44.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000334,images/srcB_241_jpg.rf.2ea733a28d93a55262bd0a5c20b8eac4.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000335,images/srcB_241_jpg.rf.9d359215a2cc5f558fbbf4882693b9c4.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000336,images/srcB_243_jpg.rf.00c95e15823ce7fa7b6182b99c3045d4.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000337,images/srcB_243_jpg.rf.557326251cc21fcc748bc1772f782e71.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000338,images/srcB_243_jpg.rf.e722c3a27d6d7f55d232e532beec8c0b.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000339,images/srcB_244_jpg.rf.49050820fde7451ac61e751982cb05df.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000340,images/srcB_245_jpg.rf.5f10b2a4db0344f07df52070c684b274.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000341,images/srcB_245_jpg.rf.906d2760d4cf9e71a1d22522ac71c1f8.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000342,images/srcB_245_jpg.rf.d743a1e998c019d895dae5f048fb9d6f.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000343,images/srcB_248_jpg.rf.2768c39183d18b966c1432778ad124ba.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000344,images/srcB_248_jpg.rf.80f952f9e7b71c4afe13ca5ae959fc2c.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000345,images/srcB_249_jpg.rf.79bf4884c6426d4614f8135ae2df417f.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000346,images/srcB_24_jpg.rf.8eb4abe19a32e47543f0794cadc200b4.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000347,images/srcB_251_jpg.rf.424ed4ab5fee653dfde539619aa231fc.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000348,images/srcB_251_jpg.rf.a909a0dda5aaaa920d2564b10cfad783.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000349,images/srcB_252_jpg.rf.540323e656cb028b8b7a62067d4d42a6.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000350,images/srcB_253_jpg.rf.733d7f1ca2afd23d36d8ce04d6713930.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000351,images/srcB_253_jpg.rf.73b096bb9b0ca055493df89db0e31ee4.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000352,images/srcB_253_jpg.rf.aeca398c291d4a77809da35d5824be0e.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000353,images/srcB_253_jpg.rf.e8e6197481ee2e417a21697170ffb8b0.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000354,images/srcB_254_jpg.rf.61aa4524271200b23b44539005d5ee91.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000355,images/srcB_255_jpg.rf.b30948d3ce96ad474f06741c401ed8c6.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000356,images/srcB_256_jpg.rf.e78f1c2cdbadabf0889cdc4e86c847ec.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000357,images/srcB_257_jpg.rf.bb3f2f7d53cc552da860223b3dc17905.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000358,images/srcB_258_jpg.rf.3536904c6cf8197106d65e0c90f2cfa7.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000359,images/srcB_258_jpg.rf.7f6a8206dc5920d7cb4f814c84de5a1c.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000360,images/srcB_258_jpg.rf.cc2e4b5c8887c83c5a922d9ba7219666.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000361,images/srcB_259_jpg.rf.ae80feecf3afc016503316362a17ec58.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000362,images/srcB_25_jpg.rf.84e4c0a2e264952e44e44478a6033a8a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000363,images/srcB_25_jpg.rf.ce7ac5773804648652307a6c04f8ecd1.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000364,images/srcB_261_jpg.rf.4d54b87e573afcd2a8449c4e34e201c4.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000365,images/srcB_261_jpg.rf.90534c708293a56079675a071322fb69.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000366,images/srcB_262_jpg.rf.1791e0a9e576036200cb2c2438a642cc.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000367,images/srcB_264_jpg.rf.2d579fbab1463c592e46291d9e8f5e37.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000368,images/srcB_264_jpg.rf.c7bd200cb6811b51ba8665360da616aa.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000369,images/srcB_266_jpg.rf.cf56fd8cee21e6327ffa9ef8b7b4d6f0.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000370,images/srcB_267_jpg.rf.ba1a6790bc0b9e132b8bacb0eca01435.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000371,images/srcB_267_jpg.rf.c7350df47ca5acfc893c843fa676d92b.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000372,images/srcB_268_jpg.rf.ce4813e3e0d98f3f7cbf412557a09ea2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000373,images/srcB_269_jpg.rf.4889dddfe7c54a8c5a71cfab60bf6a83.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000374,images/srcB_269_jpg.rf.8ffe59d4aa14df70df66915b044c4058.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000375,images/srcB_269_jpg.rf.e865a5f3f7d882c0076b17c1dfa6f9e4.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000376,images/srcB_26_jpg.rf.e5c16f886aef59be9ecdb29eab85f8ae.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000377,images/srcB_26_jpg.rf.f72ac97746a555174875652a985cd4d2.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000378,images/srcB_270_jpg.rf.2e29e989ddb42e457db27ca9e9b2b9b3.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000379,images/srcB_270_jpg.rf.9c5b61fb08558d1458d45c89e44267d4.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000380,images/srcB_271_jpg.rf.55bd3639dba1a8eeab3abbb4c9636cad.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000381,images/srcB_271_jpg.rf.95ecf9a41fa542b26c2855c99a59aaa6.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000382,images/srcB_271_jpg.rf.c5b5d446f776c46ccab90a7540d662e0.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000383,images/srcB_273_jpg.rf.55a340c25d28ebe3abb966f7eb51a35e.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000384,images/srcB_273_jpg.rf.84a45b247bd2d21cbb1ea26c21002166.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000385,images/srcB_273_jpg.rf.a83f6858a30881e5d3f4e91e702b98b6.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000386,images/srcB_274_jpg.rf.0b381582fb94fc84b122c9917b3d7f7c.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000387,images/srcB_274_jpg.rf.7cce9ac5f5019c60a611ba0fed443af1.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000388,images/srcB_274_jpg.rf.9197f8b2ff08ab56b1c06aac1ed5ea56.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000389,images/srcB_274_jpg.rf.dd532a984eb6c2dc40a37c9c0d8fdb8a.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000390,images/srcB_275_jpg.rf.8779280607df2d76984cdbdf4cdc6df2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000391,images/srcB_275_jpg.rf.d79d45c146a06874ab047568d46ec0d9.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000392,images/srcB_278_jpg.rf.6b4b25760984d1cee431e000e3307e3a.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000393,images/srcB_278_jpg.rf.8672baefd1efcb6917677c5f1d8c2c7e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000394,images/srcB_279_jpg.rf.4e1358f6608a8c3e76a67d013ff188ec.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000395,images/srcB_279_jpg.rf.c353973f7d289690b7457c6ce13729e0.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000396,images/srcB_281_jpg.rf.b02cd46981fe2f599809560e0dbf8025.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000397,images/srcB_282_jpg.rf.06baf1a95786a34cf368dbbd1b12c5a4.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000398,images/srcB_282_jpg.rf.a80cb575614ae59fce6b1bdb9ddb7784.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000399,images/srcB_283_jpg.rf.336caf269cfc01db8d60d6d1b8202532.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000400,images/srcB_283_jpg.rf.5246874f0935919ef891a06b91c879cb.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000401,images/srcB_284_jpg.rf.3b77996a431883e6374be5dcbec8b8c8.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000402,images/srcB_284_jpg.rf.40e4d93533aebd98b5f18fed0fb3f0c9.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000403,images/srcB_284_jpg.rf.588488950bc51bd1c51baf61088c9816.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000404,images/srcB_284_jpg.rf.a4d36789e0b1600448399119652ccdcc.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000405,images/srcB_284_jpg.rf.bf4bab76ce803d6b13d62a96a3721410.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000406,images/srcB_285_jpg.rf.db5e37304d2083e798f23e1b7acd0413.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000407,images/srcB_286_jpg.rf.03b3a2ba65e02129ffc90b8393a1ef01.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000408,images/srcB_286_jpg.rf.c60defdf086a95cb6bce6165651bf7b8.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000409,images/srcB_287_jpg.rf.f31da15f67c848a609acfcee56a363d8.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000410,images/srcB_288_jpg.rf.45a50ac0ed4ce4da549561c19e23b79c.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000411,images/srcB_288_jpg.rf.82544f1b025b921dff9db165c0da0529.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000412,images/srcB_288_jpg.rf.ac0fb305948bc66402ccb2c45be2caeb.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000413,images/srcB_288_jpg.rf.db6d63023c6a2d73077d8300f88b719a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000414,images/srcB_289_jpg.rf.1493cd95038aa6907ed52b68efb0660a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000415,images/srcB_289_jpg.rf.2f4f8c2c329a18b29f86c187a60e7d6c.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000416,images/srcB_28_jpg.rf.ae57dfabbddfdf083eb5d061cb80baba.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000417,images/srcB_28_jpg.rf.b2724a116aa9cf02392c4420572ee8ed.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000418,images/srcB_290_jpg.rf.f4536dba34a202aeaffce146c0f5415e.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000419,images/srcB_290_jpg.rf.fb86cb51b09c629cd361f0bdd1e40475.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000420,images/srcB_292_jpg.rf.f837125cd0f0dc3277d9bf6b62195202.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000421,images/srcB_293_jpg.rf.25f8b203961d8ae35f619cef6924620a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000422,images/srcB_293_jpg.rf.4ace778199abda24731a3bc5a89f1b9b.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000423,images/srcB_294_jpg.rf.88c717622466ef753425c2edb5f241b2.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000424,images/srcB_294_jpg.rf.e919e0c6c929cf3c7391c5c750337503.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000425,images/srcB_296_jpg.rf.53b308eacaa76b0bb46469bd69a290e4.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000426,images/srcB_298_jpg.rf.ba1311851c6027a74276c72b979a64da.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000427,images/srcB_298_jpg.rf.f2fcc169fca39c6b5871b847be1d2d25.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000428,images/srcB_29_jpg.rf.be3f5f6efec8a84be496f8aebe112522.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000429,images/srcB_300_jpg.rf.56bcdd9b209f58be49eb44f35029df04.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000430,images/srcB_302_jpg.rf.5504d0f34a0d8d5308654c34b522fec9.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000431,images/srcB_302_jpg.rf.d4472b5e74dbb4046f848807a12c2ce8.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000432,images/srcB_303_jpg.rf.a9456d5ef682fb6eeaf0ee9b56fb6d8d.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000433,images/srcB_303_jpg.rf.ce0d47a1b60c342be8c2a5e8098e415d.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000434,images/srcB_303_jpg.rf.d84332efd3c11565a9b9de1ac889b2e2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000435,images/srcB_304_jpg.rf.0247422ee71ce2f0e3f44e195b84ee83.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000436,images/srcB_304_jpg.rf.4014a2d904039e7570df5b9b3164057d.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000437,images/srcB_306_jpg.rf.52b0d38c051d96f5561fdc3c9d553f44.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000438,images/srcB_308_jpg.rf.236f2e69bb27c49cf26156a3487350a3.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000439,images/srcB_308_jpg.rf.2e9e6ebf976736fd6401ebfd65c93ab9.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000440,images/srcB_308_jpg.rf.5fed3fde003bfb36c757c3c8efec12ce.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000441,images/srcB_308_jpg.rf.b2193490ea8c0314ef063e4f5c4a1f94.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000442,images/srcB_309_jpg.rf.5c8127732030dfaf9dc7456fd73d23ed.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000443,images/srcB_309_jpg.rf.5d04acba8a9759ddb54a6d1350aaf2a7.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000444,images/srcB_30_jpg.rf.118900a355429cd58cdb1492c11ec140.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000445,images/srcB_30_jpg.rf.43ce339dc23ae5c1799b1da5f34576a9.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000446,images/srcB_310_jpg.rf.11365c25cf7c46a10eb48e3df3b5dcf3.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000447,images/srcB_310_jpg.rf.bc6f7e76e3e9225113011111f7cd3317.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000448,images/srcB_310_jpg.rf.f87d401532b2daba48760009ad082258.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000449,images/srcB_311_jpg.rf.6edbb248715661cee0620188a670fe98.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000450,images/srcB_312_jpg.rf.2d821cc23a051a6f14369f4c1e387763.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000451,images/srcB_313_jpg.rf.36dda070c1f9b27d76314f7b667e216e.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000452,images/srcB_313_jpg.rf.62e9cb67e60899df2ab7c7641e1253c2.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000453,images/srcB_314_jpg.rf.9e7edc699c5c7e3da5977fa47d39055c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000454,images/srcB_315_jpg.rf.29ff8dedc14a3342fdee26e36c698558.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000455,images/srcB_315_jpg.rf.7637cc3fddaae6983bb0bbd5d0eaaadd.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000456,images/srcB_315_jpg.rf.fec1ace6695c10bc0367b5332c12c910.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000457,images/srcB_317_jpg.rf.fe430b5abecd59b9012cccaf7a1f1aba.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000458,images/srcB_318_jpg.rf.2efc1e338204694e0e6e0e16ef8a20de.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000459,images/srcB_319_jpg.rf.dc30630f2cc284024c81879477b38f1e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000460,images/srcB_31_jpg.rf.69a7813a26656db02184aa7903cb6a2b.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000461,images/srcB_320_jpg.rf.e2062676639eedbb654fa683c9022d46.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000462,images/srcB_321_jpg.rf.410e29104f65826eaa3d3bfdeae637fa.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000463,images/srcB_321_jpg.rf.a446fca6398d70610e6c9edfb4fd4ec5.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000464,images/srcB_321_jpg.rf.aee00b722f2bbac275f8b2a236665dac.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000465,images/srcB_322_jpg.rf.3ba5bdc4650e51b46c42d7bf49fe9df6.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000466,images/srcB_322_jpg.rf.df92814cbb8fae84e5cb86a39058115e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000467,images/srcB_323_jpg.rf.647c219aab713e97d2676a79ab77e350.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000468,images/srcB_323_jpg.rf.c5addbece91a149d3c46805a656873b2.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000469,images/srcB_328_jpg.rf.2439e3996d9cb5470621d5ef560e8db9.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000470,images/srcB_329_jpg.rf.eca53c7323e3c620c1f2a6073150f511.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000471,images/srcB_32_jpg.rf.71931d4cfe7b31507c1d80682338aced.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000472,images/srcB_331_jpg.rf.9dbdcdbde0a23d029c8c1fa50286b977.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000473,images/srcB_331_jpg.rf.b8835cb24aab7802b514a21645bc7ab5.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000474,images/srcB_333_jpg.rf.64cbf71383692bb5000aa78b0e1a9949.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000475,images/srcB_333_jpg.rf.918ab987a0e629bd2f9ce0c00d8a8e3e.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000476,images/srcB_334_jpg.rf.0e6470803281e87543a240e5b93556a7.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000477,images/srcB_334_jpg.rf.1c6a99b3a27acbb3700720e846bccbde.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000478,images/srcB_334_jpg.rf.8d4ef1659af0a09b23893478de141c21.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000479,images/srcB_335_jpg.rf.1ccf3238ea2154fe198c75c5189da3f6.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000480,images/srcB_336_jpg.rf.367165fb1d1e597d496ee57edc731e5d.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000481,images/srcB_336_jpg.rf.b13e5364990b5d004aece4ba5552ce4c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000482,images/srcB_337_jpg.rf.1d8d8e86d47f04be3f2052b47a427abd.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000483,images/srcB_337_jpg.rf.215e8f7e4dc790e0183e6a7a6b2793b0.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000484,images/srcB_337_jpg.rf.2c5ad19505bfd6e4b2195729f5a35118.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000485,images/srcB_338_jpg.rf.28fb8cd1d1f07123c42c6ca553bd6a82.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000486,images/srcB_338_jpg.rf.6712ee9caa388133effc208fab6ed982.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000487,images/srcB_339_jpg.rf.4b78cc8fd7f7cbb363a4351c13f85a6f.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000488,images/srcB_339_jpg.rf.563e1c7c5a1878a4757ecaf2e6b041c1.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000489,images/srcB_339_jpg.rf.73ee85f17367bc891350cd2fd5046fdc.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000490,images/srcB_339_jpg.rf.96cf73c38835c6cac4822be1657257f9.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000491,images/srcB_339_jpg.rf.adf5f0153ff8f81f3c3ad24a1027b189.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000492,images/srcB_33_jpg.rf.7dcf0d17f354d29a03b7d96f117187df.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000493,images/srcB_340_jpg.rf.945b7201368d3261b362c2c83b4e6792.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000494,images/srcB_340_jpg.rf.9ab4bc1c3a611e21260b39d1a35091b2.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000495,images/srcB_341_jpg.rf.a6502dfe759e3b9c2cb81fea4003058a.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000496,images/srcB_341_jpg.rf.cbb4afca088b2033b25ab4b15fd2711d.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000497,images/srcB_342_jpg.rf.fca4105d75faed342b4831ec50682058.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000498,images/srcB_343_jpg.rf.67a67c54bf047f524816ffd9b5e1b181.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000499,images/srcB_348_jpg.rf.46dda9cc0955815855a4055789df74f3.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000500,images/srcB_349_jpg.rf.7fcc7ab14348db4e7b9bc393d518e190.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000501,images/srcB_349_jpg.rf.b39916297dbeeee121f07fef3ec74d39.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000502,images/srcB_350_jpg.rf.1d87965b9a0f353f5157a8e91b9e2f86.jpg,heo quay,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000503,images/srcB_350_jpg.rf.683ea1dee02208db4998293ffe081906.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000504,images/srcB_351_jpg.rf.9208e64a72e4cb13b77db0613f4c2f90.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000505,images/srcB_351_jpg.rf.e8bb3e177296758082f73930067272c2.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000506,images/srcB_352_jpg.rf.407c44be43c43519d46341b5f9119f09.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000507,images/srcB_353_jpg.rf.0e1f92c2e15862e25da151ba9b1daee8.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000508,images/srcB_353_jpg.rf.9e8cabc466062239d304b2dcd58e4097.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000509,images/srcB_354_jpg.rf.6fac35bff7168acdd4ec698478aca410.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000510,images/srcB_355_jpg.rf.2a5c5718c5f59cdb6bac9c265556b14a.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000511,images/srcB_356_jpg.rf.54a440c09c73872e7875782e002aa201.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000512,images/srcB_357_jpg.rf.0bde03c10755ad66225e95a9aa7df36b.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000513,images/srcB_357_jpg.rf.545e8131dd6f3f488dad77aa5f477586.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000514,images/srcB_357_jpg.rf.cd2d03b586616a688b462fc2b42699bb.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000515,images/srcB_358_jpg.rf.9193733e5d02473a554d2aa545a8b3a6.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000516,images/srcB_359_jpg.rf.1ee3ef370716c0d0fe94e3fab6f7eb2e.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000517,images/srcB_35_jpg.rf.b479677388a1dc83adf7292e8d7bd6c6.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000518,images/srcB_360_jpg.rf.0b19ff6283ff2c2ea11703c2b246d937.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000519,images/srcB_362_jpg.rf.d1d28991c0a86846299aaa65a5d303b0.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000520,images/srcB_363_jpg.rf.0eb0b341ae7f82703a0c57a1d1b9891a.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000521,images/srcB_363_jpg.rf.44dc2b858b7a0f9f25c833bf9bdbf84b.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000522,images/srcB_363_jpg.rf.8e302ed845b6acde4e7d749f6999b047.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000523,images/srcB_364_jpg.rf.72a4c0a0ec13fc114c4ab3efc2cf4534.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000524,images/srcB_364_jpg.rf.a2523882149b0cdf1c0585782008d70f.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000525,images/srcB_365_jpg.rf.77dcf669bf86cd949efbc14fadb3f1d9.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000526,images/srcB_365_jpg.rf.e1baa7fe6a7d12c8dff2625f990b6183.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000527,images/srcB_366_jpg.rf.9f432dda7012f0f7201fa52a3c1d4855.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000528,images/srcB_368_jpg.rf.089a1666bdad3d7b19681859879d4a33.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000529,images/srcB_368_jpg.rf.fadb5a7037b7911fc2e3cf2942ad86b0.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000530,images/srcB_369_jpg.rf.3b7829bcdf91d1727da0f6836b369d5e.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000531,images/srcB_369_jpg.rf.7762835d090ec0011a68991d259bd679.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000532,images/srcB_369_jpg.rf.ed8806c7dcc275d7310f09122b4e5c44.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000533,images/srcB_36_jpg.rf.da892ee696c4deebab4444b6e1b3e69a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000534,images/srcB_373_jpg.rf.5a1db85202fcae4ddd90997008d18730.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000535,images/srcB_373_jpg.rf.d747f637423a639d9c2ea2e859237d56.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000536,images/srcB_374_jpg.rf.ac70abbfe26bd7dc49594069c8ecefcc.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000537,images/srcB_375_jpg.rf.6a9d3d822064fcdc31366dc909aafa6d.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000538,images/srcB_375_jpg.rf.801a954ef16981cae1de29a958118ef5.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000539,images/srcB_375_jpg.rf.a9661369794a69d06da4214eaaf32d51.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000540,images/srcB_375_jpg.rf.f08788b9b4c85e666d23cf635b199e00.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000541,images/srcB_376_jpg.rf.27bb7db4f98abfec755148f86cbf3bdb.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000542,images/srcB_376_jpg.rf.39eedb2b7b0f28dce0e8e43c8f7c4e08.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000543,images/srcB_376_jpg.rf.a5fb7ec882dda86310655b238c0792ec.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000544,images/srcB_377_jpg.rf.902dfd2d9207e45701aab4362530e431.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000545,images/srcB_377_jpg.rf.de03c83829f135c2e7657ddc0fd78667.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000546,images/srcB_379_jpg.rf.90549bd7bd2f0d903240041fe39de6f2.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000547,images/srcB_379_jpg.rf.9c9aac9e3052665ac12d7ee146b42036.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000548,images/srcB_379_jpg.rf.f30610f09a781b152d059d8904a0b94d.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000549,images/srcB_37_jpg.rf.2392af0f61829ae22b4c50e97d56bbfa.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000550,images/srcB_381_jpg.rf.c1f038c260d9bb3f9950afc09d62ea4e.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000551,images/srcB_383_jpg.rf.2dc61253e7fb18b1c69a4361164ecef2.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000552,images/srcB_383_jpg.rf.542aac1218abc487c856911144b8fbaf.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000553,images/srcB_384_jpg.rf.8ff0ffe50ef3ceeead61d10361bba2d3.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000554,images/srcB_385_jpg.rf.995e874c5b4e7a460abb6d025d3609ff.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000555,images/srcB_386_jpg.rf.941bb538b44c1d9867447a4e401e7c1d.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000556,images/srcB_388_jpg.rf.babc2b38bfe72d30fe39f90952c5c109.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000557,images/srcB_388_jpg.rf.c39041f84cd5300445e98ce4929cc1fb.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000558,images/srcB_388_jpg.rf.f2c076bc2d2e44a98d5ffbb8e62f2366.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000559,images/srcB_390_jpg.rf.7d66e8d09a9be8728b1992b0a2af9d23.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000560,images/srcB_394_jpg.rf.122881a0a760545011f4b10484a25657.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000561,images/srcB_394_jpg.rf.35e5875c5de97e0bca770718b9acc3fb.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000562,images/srcB_394_jpg.rf.4aa180ba380ae48196c7e1b470f779ff.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000563,images/srcB_394_jpg.rf.cbe757c3900c8137612eb04d0826bab2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000564,images/srcB_395_jpg.rf.bca0ef3809a19d8aa21f3f482c54284e.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000565,images/srcB_397_jpg.rf.b4226e44ac6f1a3cc80632e64669bbb2.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000566,images/srcB_398_jpg.rf.2ad74d1d1622bb904583d17f4bfa72c5.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000567,images/srcB_399_jpg.rf.07dd2e2cff8bedcd5fa0f4befbaf0ced.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000568,images/srcB_39_jpg.rf.8b695f0bb80dfbeeaf60a16e7ee1e9c8.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000569,images/srcB_3_jpg.rf.a39c74f7daf26d7a2277c4e167681270.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000570,images/srcB_3_jpg.rf.b1fb35b25501c0f0444ece880031ff34.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000571,images/srcB_401_jpg.rf.adf6bcb902194ecd719fd7e2e2528219.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000572,images/srcB_402_jpg.rf.7f6f3b162095ba3b33a8511fdfa6956f.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000573,images/srcB_402_jpg.rf.8b5ea0518c9fc0004fdc71e85b78ab55.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000574,images/srcB_404_jpg.rf.73acfdf127bfbe1997ddd134f1e98d52.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000575,images/srcB_406_jpg.rf.ab1e45c80dcf9fc5c95a062e98700331.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000576,images/srcB_406_jpg.rf.b4ff7efe20767a316c73bf6f558f6196.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000577,images/srcB_407_jpg.rf.02b0bcbdf487baaef11a2c8f8f73563a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000578,images/srcB_407_jpg.rf.8de5c96e7a9155eeab6048423398a617.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000579,images/srcB_407_jpg.rf.b32655293a4ca5bba235b10ba5f029da.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000580,images/srcB_408_jpg.rf.729b21d2996dc6c6611593ed59e40887.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000581,images/srcB_409_jpg.rf.5d6a5d177401972d078ba85d26d79cd0.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000582,images/srcB_40_jpg.rf.115bbc57b10e576c100368fd7714660b.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000583,images/srcB_40_jpg.rf.63f77983c9edadace455919df6e188a8.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000584,images/srcB_410_jpg.rf.518a4ae0e34bcab6c580229e060d97eb.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000585,images/srcB_410_jpg.rf.98e7bd88d08a962e023365e008747bc3.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000586,images/srcB_410_jpg.rf.b77bb1a1c130cb51224463d8d13118e6.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000587,images/srcB_412_jpg.rf.e54c199165e404491a85d2d7edcad176.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000588,images/srcB_413_jpg.rf.abfd5ff75d12ad30b08b8f27074b73c8.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000589,images/srcB_415_jpg.rf.503afa5a44e145d2d1962c22d72c2e83.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000590,images/srcB_416_jpg.rf.2f9e41c4700c304b5d9a8fbf97115091.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000591,images/srcB_417_jpg.rf.93c45332aed42c4c0641c7eb8d7b5ead.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000592,images/srcB_417_jpg.rf.a96bc6d28cb663fc8eb8e4e5a63bf5c4.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000593,images/srcB_417_jpg.rf.e1175ce9fab5a559e8ed9f047af72e5c.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000594,images/srcB_418_jpg.rf.901e9b5ef4a026bc1990d9582d3a9e8f.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000595,images/srcB_418_jpg.rf.a65b003927a51699d8e6b0bda821f8a6.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000596,images/srcB_418_jpg.rf.e86c1102f7837b285cea1947b412c83d.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000597,images/srcB_419_jpg.rf.b1c8ab868356e503982c1833c5ad1e98.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000598,images/srcB_419_jpg.rf.ba4d6efa70bdd7d9c454a96cb1e5089c.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000599,images/srcB_41_jpg.rf.f039f0a9f02354cfbf99adc4f0ad8f26.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000600,images/srcB_420_jpg.rf.6942c9dbb8dc128d1f4c5e72a2559870.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000601,images/srcB_420_jpg.rf.7fccf7691f935032654307ca71b6ceb2.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000602,images/srcB_420_jpg.rf.ca73664e11fb8215d338412931f38b72.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000603,images/srcB_421_jpg.rf.6f7612353f22d1c9cb749fce475753c4.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000604,images/srcB_421_jpg.rf.cd1790d68b04e480275e2d35ac88298d.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000605,images/srcB_425_jpg.rf.6d90b0ced8ac34b29e3a4007830e6e13.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000606,images/srcB_425_jpg.rf.994f1864a4416e0217a8a74851bbc050.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000607,images/srcB_425_jpg.rf.9febfe9c714e8c3049fe13623279f342.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000608,images/srcB_425_jpg.rf.c6df04972a9bb383f813045ef44220ab.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000609,images/srcB_425_jpg.rf.e49d8c5954e52817abdc51192fb2f7bf.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000610,images/srcB_425_jpg.rf.f3a96e091e53c7a89793bcf6809806a4.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000611,images/srcB_426_jpg.rf.65f528c73ba0b8f6dc0dfb5c94db39ca.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000612,images/srcB_426_jpg.rf.ac7b7a2f8f3ec77a1396505091cbbca5.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000613,images/srcB_427_jpg.rf.2c0c7b7bd590a0835585423c74bb7f93.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000614,images/srcB_427_jpg.rf.999ab43b33d1695590fc299594772d0e.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000615,images/srcB_428_jpg.rf.481a1e40c1f5c46242eefa5db01dfb5c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000616,images/srcB_429_jpg.rf.049202987359ca27915946a871f7b9cd.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000617,images/srcB_429_jpg.rf.2bf1ef8a513803111b61da21d299dc8d.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000618,images/srcB_429_jpg.rf.482de3760747ffdb6160b62aa96ebf12.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000619,images/srcB_429_jpg.rf.d305446cc50e0aefe5017af548f897c6.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000620,images/srcB_430_jpg.rf.7e667f69925e27bc701a62c328cfb74d.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000621,images/srcB_430_jpg.rf.96b26a1a676f529229cb9d4ecb36879a.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000622,images/srcB_431_jpg.rf.53dfa6358748400bfcd37fead19d5deb.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000623,images/srcB_432_jpg.rf.6ba6e734cc75c6b0387e1ea060ffdbbf.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000624,images/srcB_432_jpg.rf.6bfd20b7aec345a46cc618545bcf396c.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000625,images/srcB_432_jpg.rf.a197ee1ecb350261c1cde3a8b75a986a.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000626,images/srcB_432_jpg.rf.f826a360292ef67e083132bcd941e7cc.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000627,images/srcB_435_jpg.rf.016f3e5b63452bf3e8fae41077871638.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000628,images/srcB_435_jpg.rf.2d3d871ad4050159569dc9815c1412e1.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000629,images/srcB_435_jpg.rf.d672d3a3415db2643110c8b40dd8f559.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000630,images/srcB_435_jpg.rf.d7e2e9a0aee6cd0c7e1b36403828bc85.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000631,images/srcB_436_jpg.rf.22363d5e1bf441d48083463065c150a1.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000632,images/srcB_436_jpg.rf.304d5878158f1f150539a5e0f6bb4a89.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000633,images/srcB_436_jpg.rf.c694c09a31673de2908b4e893b6a39f4.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000634,images/srcB_438_jpg.rf.49b4b278ab487380a334333ec2a7734d.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000635,images/srcB_438_jpg.rf.ff4e531d0eb25574b7c071be0ddcbab7.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000636,images/srcB_439_jpg.rf.a046fe8691366485e12379d50e2f9f46.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000637,images/srcB_439_jpg.rf.c2c0bb18d028f48b2d678037361b8516.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000638,images/srcB_440_jpg.rf.16677cff0b60a95b6bf7e5211e48008c.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000639,images/srcB_440_jpg.rf.328e8d55898f7cc002a1232c4e850895.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000640,images/srcB_440_jpg.rf.3da3aff1b48e73e2c56f69fbbdbc07d1.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000641,images/srcB_440_jpg.rf.7993bc27c13d9688a80d70cafec91d21.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000642,images/srcB_441_jpg.rf.0775c599c8a79bfa0c0741984a5127ff.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000643,images/srcB_441_jpg.rf.46361d50d22c285fc84ead8eab2eac8a.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000644,images/srcB_441_jpg.rf.5db24e2b9068d5a5c3b55603ea667bb1.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000645,images/srcB_441_jpg.rf.7e61550fc6927c14864899ae7a8c5493.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000646,images/srcB_441_jpg.rf.925fe088d111cb5eccc9ea33caafa30b.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000647,images/srcB_442_jpg.rf.63faf3772d5b4697c46236008ed7f2c5.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000648,images/srcB_444_jpg.rf.ba19e4097c149d34211283420d565923.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000649,images/srcB_446_jpg.rf.3fb096bd093338299de9fccadc0096d3.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000650,images/srcB_447_jpg.rf.5626a50444bd18cf718d72c8a1294af0.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000651,images/srcB_447_jpg.rf.a8abb4301f37d8335a2f262d27091c63.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000652,images/srcB_448_jpg.rf.1cfaacfd86a5f4bd2164f604688e0b99.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000653,images/srcB_449_jpg.rf.55a5a2329f9e9a98de1b0f0330f373ac.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000654,images/srcB_44_jpg.rf.d95a53dae623eff028ea91b5cbfc2a91.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000655,images/srcB_44_jpg.rf.e17f6bf329586d2d5791982143971e7a.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000656,images/srcB_450_jpg.rf.48a68c3c103dd3fac5db5accffbf9e7c.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000657,images/srcB_450_jpg.rf.a58231945503b2b1a2d38f72bdda101d.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000658,images/srcB_451_jpg.rf.824779b46da1d220727994d69bdac6cc.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000659,images/srcB_451_jpg.rf.8489e29dfd8ef0b492ef2d645272fcda.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000660,images/srcB_454_jpg.rf.0327cdb1f8873264ed88c995c516386f.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000661,images/srcB_454_jpg.rf.561c38c651912683dc69aeec4f9692ec.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000662,images/srcB_454_jpg.rf.b055daafe9dab8e3ac838694ce617bcd.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000663,images/srcB_455_jpg.rf.91bf1f0c228406b2e11bbb61e0a02ee2.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000664,images/srcB_455_jpg.rf.b85e17db06f1f9b926743ae212eb7693.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000665,images/srcB_455_jpg.rf.bbd4c2153394c2bc2f2caf568e01fef5.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000666,images/srcB_455_jpg.rf.f81fdf0f9d2a0a13b5fecdcd5bef23cd.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000667,images/srcB_456_jpg.rf.03d250c1d821d7bce98d4847d121f737.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000668,images/srcB_456_jpg.rf.c07fbfd3f6bed324d57b98521fb3f4c6.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000669,images/srcB_456_jpg.rf.daef9e9d4e3972e63613e70a3f79d411.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000670,images/srcB_457_jpg.rf.f06a993b91a07541261c842b767337db.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000671,images/srcB_458_jpg.rf.2860be709b1b4bcee323f44339f3f976.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000672,images/srcB_458_jpg.rf.6ebebb887c8e21bfe5e7decc1465952a.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000673,images/srcB_458_jpg.rf.a06bb2dcd98a9f9e419f6afd8fc12a33.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000674,images/srcB_459_jpg.rf.89646b89b53eeba4621b7bfb35121ece.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000675,images/srcB_45_jpg.rf.1068433cd806a22f9dbd1906046f7d04.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000676,images/srcB_45_jpg.rf.aabd67e03c6887a19a68496416efcc9f.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000677,images/srcB_460_jpg.rf.0eb43f32be66351097af3aa46b6d9a39.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000678,images/srcB_461_jpg.rf.122c6f0465fc628912177da9ede57777.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000679,images/srcB_461_jpg.rf.6537105112860e111c1cbb6542db5ddf.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000680,images/srcB_462_jpg.rf.32a50df444f2a1ba28a8fbb155829a9d.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000681,images/srcB_463_jpg.rf.fbc712e19ccd63948ff71575675c0550.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000682,images/srcB_464_jpg.rf.4209a91ae30bcf5718813d622528a259.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000683,images/srcB_464_jpg.rf.4af4504e149036d9dc3ab00905f766dc.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000684,images/srcB_465_jpg.rf.6a4aa100d0025db4f03062eca6d0c252.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000685,images/srcB_467_jpg.rf.c88f838f6433d4bb128f063649268e62.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000686,images/srcB_468_jpg.rf.8a8f649d1d1e8b1dd5ea0ede3b1fec85.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000687,images/srcB_468_jpg.rf.d10992863826e16e12564d0652970ddc.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000688,images/srcB_46_jpg.rf.766e904b773272e9cd97a1d5574b33d3.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000689,images/srcB_470_jpg.rf.6a9606ed5cb509f91d4e7c4d212e1da2.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000690,images/srcB_471_jpg.rf.cadb50e81b49cb4212c7578df68d48b3.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000691,images/srcB_472_jpg.rf.ed7d0f7f89d119f7d5f6a7e74c7db6ee.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000692,images/srcB_473_jpg.rf.f2689951aeb9cb36fc196846a2264345.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000693,images/srcB_473_jpg.rf.fb413c702a025667a3eec658f23a8dba.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000694,images/srcB_474_jpg.rf.9897a4fbe0d93021940daea1e084cfa2.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000695,images/srcB_474_jpg.rf.e88216c64881b705a0bf4cc7c12d2061.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000696,images/srcB_475_jpg.rf.0892decf3c9b904a86e324ae52d2438d.jpg,canh chua,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000697,images/srcB_475_jpg.rf.9bb58badaefc04a9869db282a424d29a.jpg,xôi xéo,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000698,images/srcB_475_jpg.rf.db45e9c393873559d7bec6e2de80d5e5.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000699,images/srcB_476_jpg.rf.453684a7db0c4095b4f454fa0c24492d.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000700,images/srcB_476_jpg.rf.b1d173acde7982779571cfb997799b40.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000701,images/srcB_476_jpg.rf.b7ded3cd93d8d1eb8e07670084c8d356.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000702,images/srcB_477_jpg.rf.022ff77c8984a2a7ab6fd771fd9ac88d.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000703,images/srcB_477_jpg.rf.56f95b3f61dfa82811a5febf4e991e2f.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000704,images/srcB_477_jpg.rf.7155b5647ff838fd13d1f3b87c9bffec.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000705,images/srcB_477_jpg.rf.8c164fc472052098ce812280821eebcc.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000706,images/srcB_478_jpg.rf.0caf27fcc5e72cd4c87c85f84266dbf4.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000707,images/srcB_478_jpg.rf.70b50bb562f0804dc9e32ceea087ae98.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000708,images/srcB_478_jpg.rf.9149dfd88817f90026c1ed475171cfc4.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000709,images/srcB_478_jpg.rf.9f913b1a30f8648fc3a52e09049c403f.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000710,images/srcB_479_jpg.rf.97064c925110f7383dc9e9511ed510df.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000711,images/srcB_47_jpg.rf.280553664c38c276248e0cf693714107.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000712,images/srcB_47_jpg.rf.70acc817137c32b5d1eadd5f826ae1b9.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000713,images/srcB_47_jpg.rf.7a3e692318e60db02e3c3effa1ffbd90.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000714,images/srcB_47_jpg.rf.e38dcf4e91619c2e3045037b11779e95.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000715,images/srcB_480_jpg.rf.0fa275de49491fdd986e26b8be2ad604.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000716,images/srcB_480_jpg.rf.9df1fca8d418c4dc457cd31d3474a283.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000717,images/srcB_481_jpg.rf.7c499fe61b5e8de64e4bdf87d21323b7.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000718,images/srcB_482_jpg.rf.7e6ff38af1033fd2dcb010ab6a4b544b.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000719,images/srcB_482_jpg.rf.d796397039b9e853217bd1df595185ae.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000720,images/srcB_483_jpg.rf.4c3ef2232f4b708085df77c2b80ca911.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000721,images/srcB_483_jpg.rf.581f704ad39d9dc1ae64400e8a17ba2b.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000722,images/srcB_483_jpg.rf.86c2228c707f6da7b1469674e66a9efd.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000723,images/srcB_483_jpg.rf.b6124e6af9d80c49a7476bde43617d43.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000724,images/srcB_483_jpg.rf.c99d0b1bef4ac91cae76e8799a289abd.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000725,images/srcB_484_jpg.rf.7d485070cd46ceea7bb27818ec40a86d.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000726,images/srcB_487_jpg.rf.41ade33e34cfaf152108153271cc66a8.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000727,images/srcB_487_jpg.rf.493236c109c864295317938a806de49a.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000728,images/srcB_487_jpg.rf.70813b8995b4c8cfc706313155bbfaea.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000729,images/srcB_487_jpg.rf.eee74a8d1cf1b0806df3dfaadef4ec5b.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000730,images/srcB_488_jpg.rf.05abafda7a345c5bc97b97d5bcb7f6ea.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000731,images/srcB_489_jpg.rf.230e30a98049f675c9008cf8c23db2cf.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000732,images/srcB_489_jpg.rf.3725eea0da06660ff49f936c98f1b143.jpg,món ăn khác,other,640,640,web_scrape_B,True,verified
+VNFOOD_000733,images/srcB_489_jpg.rf.d375ba3d1b7133341bce010b54d6eb8f.jpg,heo quay,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000734,images/srcB_48_jpg.rf.51f80325010be6d4a7542405613dc20b.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000735,images/srcB_48_jpg.rf.b615c5188f42489d9ef9760af7a96a25.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000736,images/srcB_490_jpg.rf.61cb1ef7f12297c5bac9f6280aa47f54.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000737,images/srcB_490_jpg.rf.7e1c77012c7e73fe8352098c3a8a95cf.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000738,images/srcB_490_jpg.rf.de8f0c55a99566763f184eb2e435d96c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000739,images/srcB_491_jpg.rf.2b78b936693976d77732a41f0c1d744a.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000740,images/srcB_495_jpg.rf.22ef5631546b659790701d4a27d41d24.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000741,images/srcB_495_jpg.rf.3a9763bbb037e3dfcc29f6c91bd75b19.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000742,images/srcB_496_jpg.rf.3cf147bf39d394a83b7530af4c5eaa5f.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000743,images/srcB_496_jpg.rf.6094f88c870282a895c7423e511ff328.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000744,images/srcB_496_jpg.rf.7e1952ad3042502618c40c92735c5ccb.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000745,images/srcB_496_jpg.rf.95b6c6093b9041f5a2125d84b812130d.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000746,images/srcB_496_jpg.rf.ab55433b449585b33871c3ea0094755c.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000747,images/srcB_498_jpg.rf.9aab58f8d1a93014d60881c4831a5f69.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000748,images/srcB_498_jpg.rf.9ea8d48eae9eabfef6120105a8ddd3f4.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000749,images/srcB_499_jpg.rf.b0444937b387a76921238fdadd99a75a.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000750,images/srcB_500_jpg.rf.2b839a2bb5bd01fbcb28f313411858c4.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000751,images/srcB_500_jpg.rf.40c4a56621e9d20811baee10b970dd2e.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000752,images/srcB_500_jpg.rf.4ced02909124c936d50f67370b032d7d.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000753,images/srcB_500_jpg.rf.74ced712fa7d9311d142831bcf3f9c32.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000754,images/srcB_501_jpg.rf.b4389e32361ed68a49c1fe6c6b911bd7.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000755,images/srcB_501_jpg.rf.b9cd17c06865a0b4691beb365f935832.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000756,images/srcB_503_jpg.rf.427ecc1a301bf979b8e7fb8e83d30979.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000757,images/srcB_503_jpg.rf.7b4003a410a22b4001a76413a5ff3e6b.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000758,images/srcB_504_jpg.rf.5109eafb5eea49e0d2958546a911da28.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000759,images/srcB_504_jpg.rf.6aa6c87e575c7bd281ec3fe6005a4202.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000760,images/srcB_505_jpg.rf.38f2c8d9a021aca7810d366b901ffd3d.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000761,images/srcB_506_jpg.rf.be64f34b02c3c139ce761d5b0b79963b.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000762,images/srcB_507_jpg.rf.47b1fa63f2bd48f33cfd5fb85b910f4e.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000763,images/srcB_507_jpg.rf.b781445f68303cda46a9f6a12d864a35.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000764,images/srcB_509_jpg.rf.612a75cbdbb8a3afe60fde1fc9b4fa26.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000765,images/srcB_509_jpg.rf.a7313730e238fe247e09d236920aaa23.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000766,images/srcB_509_jpg.rf.e242db9caf6ea968516af489e27e2a29.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000767,images/srcB_50_jpg.rf.12051cc28fe52d8125027b07c1332cdd.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000768,images/srcB_50_jpg.rf.341e52e1f855f8095c680cb9f47c67b5.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000769,images/srcB_50_jpg.rf.cc3396daa33b432e5e53430a531f6ba0.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000770,images/srcB_510_jpg.rf.2e3ef98fdebb79bda070768048b09077.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000771,images/srcB_510_jpg.rf.94779503043fd3853613df049c0e66e1.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000772,images/srcB_510_jpg.rf.d350a33c49612523e3bd4e5d5fcce3a0.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000773,images/srcB_511_jpg.rf.6d8709d5fa228ed9bb64c5e5e3022b7f.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000774,images/srcB_511_jpg.rf.6f2e611679f139a1a8e97cbf34d502a0.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000775,images/srcB_511_jpg.rf.e060cb0e4150fbe1ab641db648359fa9.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000776,images/srcB_512_jpg.rf.0796cc83c6e788b342d8fcb916f3c514.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000777,images/srcB_513_jpg.rf.2158514ad69a417695c69b88efa6bbd6.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000778,images/srcB_513_jpg.rf.cb14e27c4f9386c2fba09480cf1ae229.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000779,images/srcB_514_jpg.rf.25b400b2b198779e40b1788d05d32a9a.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000780,images/srcB_514_jpg.rf.529fb8423eef0795489ecf47f4db328f.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000781,images/srcB_514_jpg.rf.eb79df3826621b6c81305f1122e09fc9.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000782,images/srcB_515_jpg.rf.7f21900c10ccc4bb97804f7b5c0b1119.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000783,images/srcB_516_jpg.rf.885673b9003bade33702ed1553a996c9.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000784,images/srcB_517_jpg.rf.1485669160698ef41e222a244662b870.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000785,images/srcB_517_jpg.rf.ce62505d3d258be14216b9660c1d74da.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000786,images/srcB_518_jpg.rf.a2352ebb14daa8bf38b7841503e5d86d.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000787,images/srcB_519_jpg.rf.0f580d7f147c451276edf1e0a414f9e0.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000788,images/srcB_519_jpg.rf.22f2f94c382633ed96319d0884928904.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000789,images/srcB_519_jpg.rf.8232c1543560933c1553277654581d43.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000790,images/srcB_519_jpg.rf.c5360f6e6bb14f0794779732ba7a1dff.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000791,images/srcB_51_jpg.rf.8f51653c70afbcaa58486b8786c83715.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000792,images/srcB_51_jpg.rf.9742b86106656d03d90f5a0243e82762.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000793,images/srcB_520_jpg.rf.34fdb07357b3d6594a50aaa4d8dd2b31.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000794,images/srcB_520_jpg.rf.85e3271561e794295628fc272b743fca.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000795,images/srcB_521_jpg.rf.19a18ffa29450440bd09837293b5e5d5.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000796,images/srcB_521_jpg.rf.e9f4d80de54c551de07ae94495be7cad.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000797,images/srcB_522_jpg.rf.594340b032987d34c117befef9017f2f.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000798,images/srcB_525_jpg.rf.e6c555f0dc2cae66d20c074b22453dc0.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000799,images/srcB_526_jpg.rf.57096a713a6dd6de552d5dd3f1cb54b3.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000800,images/srcB_528_jpg.rf.82cbbb1f81fd5d355c4169f2c5fbb6dc.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000801,images/srcB_529_jpg.rf.8e4be722fcf4d3a4e9ee21f04c7d59e7.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000802,images/srcB_529_jpg.rf.a86554851f5fd4b5cc076cc518322b16.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000803,images/srcB_529_jpg.rf.d7dc286dede1972fd0ab6eadef15b091.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000804,images/srcB_52_jpg.rf.ef2d147905116a08eabb05d96766e9d8.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000805,images/srcB_530_jpg.rf.0e98868bc2540fa457a4cc2961f80adb.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000806,images/srcB_530_jpg.rf.d9e102eb802776ffa9389d795b3353fe.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000807,images/srcB_531_jpg.rf.6295b6aa88b4f1ed74f8bef3355b1f94.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000808,images/srcB_531_jpg.rf.d9f24e9f34845ae7f86b909d2aa50f58.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000809,images/srcB_532_jpg.rf.afd7eb1f51e7ccd4670a0f4bb53fbdfc.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000810,images/srcB_533_jpg.rf.713f8a4d92e83ac6c1ed9bb92579165b.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000811,images/srcB_534_jpg.rf.f80cc0443dad8feb4ed603c2ef563455.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000812,images/srcB_536_jpg.rf.5ee20477fc378fb8959882e2d126a067.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000813,images/srcB_537_jpg.rf.bd5107635c17fddd8c855fb4d366252e.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000814,images/srcB_537_jpg.rf.d5eb710fe2f7d4fe4dd3b201d465f607.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000815,images/srcB_537_jpg.rf.e67b7e6af7ada324ac6782b59c24ce2b.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000816,images/srcB_53_jpg.rf.fad6424daa6f413c6df866204e503ad5.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000817,images/srcB_540_jpg.rf.027844b584f978748141c84ccd8a7d0e.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000818,images/srcB_542_jpg.rf.5e716aefe6b9dd7c0caff0b0a77048b0.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000819,images/srcB_542_jpg.rf.f4aed7da0558da112a3b68421014f7f0.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000820,images/srcB_543_jpg.rf.2e1c92bcdc39c2cec7b0230844e70552.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000821,images/srcB_543_jpg.rf.ef620d17966fe368388bfd58ccc73441.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000822,images/srcB_545_jpg.rf.d2bc83c395b92e833e00cfd3e250eb19.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000823,images/srcB_545_jpg.rf.fee7a9d1c2bf68a59c536012e4b1decd.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000824,images/srcB_546_jpg.rf.8bfe73a47951c73b6666ce0f2e396640.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000825,images/srcB_548_jpg.rf.025dc30c362dc5d9ec5c91d549d51766.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000826,images/srcB_550_jpg.rf.53a6aee7871522aef4e7cb7eb1034209.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000827,images/srcB_550_jpg.rf.92aa3e38f56ca9fbc5e44a3e9d9a324a.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000828,images/srcB_550_jpg.rf.d3e624ab16fa9bf6a995fe9e0b89027b.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000829,images/srcB_550_jpg.rf.daf5e44cb8069655638a37210c058302.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000830,images/srcB_551_jpg.rf.313d8e39aadfe5f8c2a5bb9c0cc7fda4.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000831,images/srcB_551_jpg.rf.36133063b4897fdcc385627347159bcf.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000832,images/srcB_551_jpg.rf.4fe6ac0e74921ef1a21dcd6e8e1f40f0.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000833,images/srcB_552_jpg.rf.3deec75a9336ce747bac3d398b9afe9e.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000834,images/srcB_554_jpg.rf.1da9b778debeb796a9e09248b1ee7274.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000835,images/srcB_554_jpg.rf.a6bf06f35afaa455aaf4f768d6875070.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000836,images/srcB_556_jpg.rf.9581a2878df0ebd8c2aa7f44a2877864.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000837,images/srcB_557_jpg.rf.2e3c9ddfefc2be560343f229b086f447.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000838,images/srcB_557_jpg.rf.51afad84c34cd15c42d2af8e420f481a.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000839,images/srcB_557_jpg.rf.6a34202237d0b4178b3091fb3721de8e.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000840,images/srcB_557_jpg.rf.f75e4e44e59b8623c076990d00f6e409.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000841,images/srcB_559_jpg.rf.c13150eafcab36d9930def08b5f7916d.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000842,images/srcB_559_jpg.rf.c8a22159c13b539caefeffe49c82ec45.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000843,images/srcB_560_jpg.rf.4dbf114025ea2ca4cb4943fd65b58c5c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000844,images/srcB_561_jpg.rf.375ee917e9e51d64a2986301f1d88761.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000845,images/srcB_562_jpg.rf.0c2a47bc56c05bef9e26386e391ea485.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000846,images/srcB_562_jpg.rf.da92c53cf844878351b458297b142244.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000847,images/srcB_562_jpg.rf.e04e1098df2a400d0a0237e38560f5b3.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000848,images/srcB_565_jpg.rf.b663942f2d7e588ef24f559f1aa8a9bf.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000849,images/srcB_566_jpg.rf.1d6e6787ebbd58826496cb76610d1748.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000850,images/srcB_566_jpg.rf.5431068acfd38bdbbe2ba9a7f97ca6f7.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000851,images/srcB_566_jpg.rf.f451a57ce7d0a0e383ca436ae09ebf21.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000852,images/srcB_569_jpg.rf.67570c760ce7232f4b3475ddeeea8ec6.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000853,images/srcB_569_jpg.rf.c7b24f31b27b399947b9c3c988ccc589.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000854,images/srcB_56_jpg.rf.6b966f4a6a4db9f288328e1174a65b86.jpg,nem chua,meat_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000855,images/srcB_570_jpg.rf.c6a7ebab7e92518d4b495db51cc52b1c.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000856,images/srcB_570_jpg.rf.edce449564576d67be38074ae041218c.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000857,images/srcB_570_jpg.rf.f41ec23c1b76e8b58e4870dbfee5c8de.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000858,images/srcB_572_jpg.rf.be0ddf5773c3554340226e29fd696c7f.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000859,images/srcB_573_jpg.rf.007f9e5862895661c57b2948c8a57c32.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000860,images/srcB_574_jpg.rf.7a68e2878a7ec2a2ee66c2c4e06dd95c.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000861,images/srcB_575_jpg.rf.ae1124376954f6c537dcc6e9617d1cf5.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000862,images/srcB_576_jpg.rf.7d71a85d9ea04188b11aa431675f63cb.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000863,images/srcB_577_jpg.rf.655b92d461d1b04390a1b1648d3b91f1.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000864,images/srcB_577_jpg.rf.8c2e26b661c4ca54a9a9381c6f117e2a.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000865,images/srcB_579_jpg.rf.2a91db4bd1002f50d251f3d22b63cbc1.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000866,images/srcB_579_jpg.rf.3547acfb799241371b8ab3250d0aaf9c.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000867,images/srcB_579_jpg.rf.85da7f0e63b7f7203142c0559a8aaef0.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000868,images/srcB_57_jpg.rf.28b9e020f6fadac973d4a4d2c13ca5cf.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000869,images/srcB_581_jpg.rf.bf840e13cbbe8e8834f96906e354e1d6.jpg,bún thịt nướng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000870,images/srcB_583_jpg.rf.d0282d6615f2c6fa45defa058ef00fa0.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000871,images/srcB_587_jpg.rf.2eed93e809e357f126d947eb8acb5f86.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000872,images/srcB_589_jpg.rf.1661ef6738c255744c5b6051269eedb7.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000873,images/srcB_589_jpg.rf.bea7bbeecded03d1b2565d5e1bc4b7ae.jpg,canh chua,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000874,images/srcB_589_jpg.rf.ead05639d79bd52458bc1d44dc6733ba.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000875,images/srcB_58_jpg.rf.cb64a964ad1085c3a37abb1454cc565e.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000876,images/srcB_590_jpg.rf.1f86a14f180c0f8aa49968fd026cfaa8.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000877,images/srcB_590_jpg.rf.54d931267a149aa6a0e90594e7b826f2.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000878,images/srcB_591_jpg.rf.1a0c7a9d0aef6b0a3084344912ce00ca.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000879,images/srcB_592_jpg.rf.17c89119bc90949d12bc7d121c0a203d.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000880,images/srcB_593_jpg.rf.0f037b3d199d8a73e031319bdd73de7f.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000881,images/srcB_593_jpg.rf.344f24ac01715f168c03a58273a2ef27.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000882,images/srcB_593_jpg.rf.56ad194e6c7dcadb8e0d8b332e9f446f.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000883,images/srcB_594_jpg.rf.4a934d4fdcdab599be4d94eecee14dcf.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000884,images/srcB_594_jpg.rf.54b86f0a1e29a3d13202892b63843a80.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000885,images/srcB_594_jpg.rf.6cd45164187c1b1b10198b27a5fedd17.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000886,images/srcB_595_jpg.rf.9d8508957480b8a555a97b5d377215a4.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000887,images/srcB_597_jpg.rf.2f15e4bde945cf1207f4a14bad8e9ed7.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000888,images/srcB_597_jpg.rf.ad5246285f95bc19645f0b138a5d7f2a.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000889,images/srcB_597_jpg.rf.d09f7eeea8791030d44c2ae64fcb5f10.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000890,images/srcB_598_jpg.rf.1b70a8017265df5fe6ca30f0230496c5.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000891,images/srcB_598_jpg.rf.2764151ebf8f6e233fe40502fab3a4dc.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000892,images/srcB_598_jpg.rf.c5695ffc863d1628968fefc98940aa67.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000893,images/srcB_599_jpg.rf.0c1f37fc5ff2f794220319fe1e99fc8b.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000894,images/srcB_599_jpg.rf.f0d668ac9847e99b51cb7dba99f91f29.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000895,images/srcB_59_jpg.rf.9e0fc8d9c0667bae7964c47bee042561.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000896,images/srcB_5_jpg.rf.fa18accbc54ce60184793e96093ea8ff.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000897,images/srcB_601_jpg.rf.8a87d6cf3381459048321c1b89dd2eae.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000898,images/srcB_602_jpg.rf.128f011428764139f41626af73eb30c8.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000899,images/srcB_602_jpg.rf.9010223b430685cd9c212b99ee556b26.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000900,images/srcB_602_jpg.rf.a93a251e28e80d9ce77e4a684344ddac.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000901,images/srcB_602_jpg.rf.f8d3ff41f35382573abfdca91892f080.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000902,images/srcB_603_jpg.rf.51c9f2ab19403b4491bcfee43361cb84.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000903,images/srcB_603_jpg.rf.7384c0a7d9d2a8d973d1ab43061c6852.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000904,images/srcB_603_jpg.rf.fc193fb2d87626ebb42925ba1e336d0c.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000905,images/srcB_604_jpg.rf.1b4975927ccb1b3dd003d7fc87d94ee5.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000906,images/srcB_604_jpg.rf.6b7dde811712c6667f3aea5046470082.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000907,images/srcB_604_jpg.rf.8acf9d99c36a035ab7805852cdb7b856.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000908,images/srcB_605_jpg.rf.226cae4ecc615e316cdf72248104490f.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000909,images/srcB_605_jpg.rf.6df7bf129c5a6642703388b8a36e4ffc.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000910,images/srcB_605_jpg.rf.c4bf10d6f373c261d35c67c41ac4325b.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000911,images/srcB_605_jpg.rf.f37b676b32f84e6a761de3b755bc6272.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000912,images/srcB_606_jpg.rf.c0aa61058f7a3912bf71b1135d2ebd2d.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000913,images/srcB_606_jpg.rf.ea0a8e8a88a2cad4b5cdd72b8d088065.jpg,bánh canh,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000914,images/srcB_607_jpg.rf.0becb711c9dead2e2330e0be5a2afe02.jpg,rau sống,salad_vegetable,640,640,web_scrape_B,True,verified
+VNFOOD_000915,images/srcB_607_jpg.rf.50d405b9703da237ebb789ad48568bb6.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000916,images/srcB_607_jpg.rf.fa9283c4009142ad5fca73d2a7b55545.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000917,images/srcB_608_jpg.rf.ae9345fa34ef1d831d8dab9dd769ab87.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000918,images/srcB_608_jpg.rf.f6a07578bcb5d7bbf0437e00cad0098a.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000919,images/srcB_609_jpg.rf.aed2801eb0dbe2707c6fa8585fab0cab.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000920,images/srcB_60_jpg.rf.19151f0f2e2ed2c010ebbea6737bde76.jpg,cao lầu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000921,images/srcB_60_jpg.rf.bdbbc7b6f61a3eb10f3cff3078b364f2.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000922,images/srcB_610_jpg.rf.2f4324ddc5e433ed891f78675ab9af7e.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000923,images/srcB_611_jpg.rf.de69d5ef9831cb16ed7428c4ae294543.jpg,mì Quảng,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000924,images/srcB_611_jpg.rf.e647d4f9f9158fcd42b0b73937e5f030.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000925,images/srcB_612_jpg.rf.826228d4461edb7cdd8d1e9d9cb13009.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000926,images/srcB_612_jpg.rf.fbf3ccd234f715f1cf2771134a1ee96b.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000927,images/srcB_613_jpg.rf.0ba19cff7183e04390fefcc578eebc33.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000928,images/srcB_616_jpg.rf.7122f4361b5bd0fa857ee2f627d43c2c.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000929,images/srcB_617_jpg.rf.0f800baad176867122422bde2e142269.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000930,images/srcB_617_jpg.rf.96e7eced52f01955d8a4c0ba713c21dd.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000931,images/srcB_618_jpg.rf.7ba989dd68f4eef4ea3bd5885219b1cf.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000932,images/srcB_618_jpg.rf.be41aafda8847f0fee20cd21967314ac.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000933,images/srcB_619_jpg.rf.e714a865a9d091f2d412193098767580.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000934,images/srcB_619_jpg.rf.fb612e3c69a563d8b7d10f8efbed3160.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000935,images/srcB_61_jpg.rf.0b008becd8af5838f4ae9269109fc8b5.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000936,images/srcB_61_jpg.rf.48fb0fb36f32df8f5d36622a826d371a.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000937,images/srcB_61_jpg.rf.d300b3602dc0794667d5794a50ef7f75.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000938,images/srcB_620_jpg.rf.47cb3dae70cc11f897e34e9803505c54.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000939,images/srcB_620_jpg.rf.c9e312e6a58592c11531d4574389c7c6.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000940,images/srcB_621_jpg.rf.f99382b007979ab09c55380607922a61.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000941,images/srcB_622_jpg.rf.08497c456905db8df7765e91d2373005.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000942,images/srcB_622_jpg.rf.7100054055fbf7c7d12e25636cb5362a.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000943,images/srcB_622_jpg.rf.d3e79b74d9ba51c3cde95183665a9c9a.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000944,images/srcB_622_jpg.rf.eb748cdf4d035aecb5e6cce4c471d4b6.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000945,images/srcB_623_jpg.rf.128fdd98eb33f54124bd22eb0017846e.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000946,images/srcB_623_jpg.rf.9787785936d42bb9d0b9ac5ba40945ef.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000947,images/srcB_624_jpg.rf.5856d803e1857eeb15a6875bd1e4f919.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000948,images/srcB_625_jpg.rf.d43683eef0a795b5daecc1313f13e90e.jpg,phở,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000949,images/srcB_626_jpg.rf.138bc2105c4224f99d1cda68fc27a56d.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000950,images/srcB_628_jpg.rf.0e0d9ec34fbebc4df29bbc7f09c47bc6.jpg,hủ tiếu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000951,images/srcB_628_jpg.rf.1012b094835f42e0611c16a030b36bd4.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000952,images/srcB_629_jpg.rf.76704ddffaa1a4c382fdd811bbe6db8c.jpg,bánh bèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000953,images/srcB_62_jpg.rf.0d726dfcf5c7acfda31cac058481f3a8.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000954,images/srcB_62_jpg.rf.9e8f256cb174a13427e83a6d593e97bb.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000955,images/srcB_62_jpg.rf.cba7b386ac064cd310bf1acddb09aaea.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000956,images/srcB_631_jpg.rf.588aee8dbfc5223e2056e9aebd693787.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000957,images/srcB_634_jpg.rf.67f244809bed75c862899ce4dbd40116.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000958,images/srcB_635_jpg.rf.7602ce6b8e15e036bc65fe3a36c02405.jpg,nước chấm,sauce_condiment,640,640,web_scrape_B,True,verified
+VNFOOD_000959,images/srcB_636_jpg.rf.50bdb543d959c06bee1f1550c864600a.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000960,images/srcB_636_jpg.rf.78e974d33332ab1a9f1f693a497eacf8.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000961,images/srcB_637_jpg.rf.03f64722e6894006e51d5ff5c5c98e12.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000962,images/srcB_637_jpg.rf.aeb971107213950b80904a1d36e09099.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000963,images/srcB_638_jpg.rf.01df3a749d6020a93ffbca44c593e2ec.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000964,images/srcB_639_jpg.rf.6b31032ca286e8effc6d46a2f61845de.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000965,images/srcB_63_jpg.rf.2c484213010436d2fe0eb001434a3608.jpg,bánh pía,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000966,images/srcB_63_jpg.rf.9c191be178c9c5534365b6344d1b939d.jpg,bánh chưng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000967,images/srcB_63_jpg.rf.fd3a5809d9daba1fd687febdd25a7427.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000968,images/srcB_640_jpg.rf.bde1b57d1c4a362e4a6ce7703e817044.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000969,images/srcB_642_jpg.rf.e638bd21debc0b18730ff040cd0bdd7f.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000970,images/srcB_645_jpg.rf.de164daa3cd976b05b828145762164ae.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000971,images/srcB_646_jpg.rf.581478f1b6a076454483aefece62fc7c.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000972,images/srcB_646_jpg.rf.eb43d235ce40f3cefac8a56a3bd1cd76.jpg,bún đậu mắm tôm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000973,images/srcB_647_jpg.rf.ecd1dc29bdc8da19515492e042025a2d.jpg,bánh đúc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000974,images/srcB_648_jpg.rf.2d6d3eeafee01ec4355c3c8cb2c1c8f0.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000975,images/srcB_648_jpg.rf.3b853c191d7b981db6c607877d2f4d6d.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000976,images/srcB_648_jpg.rf.d3f88ce92ae2315568e87f564cfbd58b.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000977,images/srcB_648_jpg.rf.e50ce19d2426da1d8e4badf5b2de2a1e.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000978,images/srcB_649_jpg.rf.4c32930a81849e20f048980ab469aab9.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000979,images/srcB_649_jpg.rf.78b8fafb00cc714c9861bd218fcb4ffb.jpg,bánh giò,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000980,images/srcB_64_jpg.rf.b069322e09eee7a2c15e46c92cfb9e24.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000981,images/srcB_650_jpg.rf.3ba08506b764037c1b4debf1d217d97e.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000982,images/srcB_650_jpg.rf.4b8742c4a4cd80b3dec6e5b9189e7c7f.jpg,bánh khọt,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000983,images/srcB_651_jpg.rf.0b304d9d6b0c5e8be2e71c56cef34eb5.jpg,bánh xèo,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000984,images/srcB_651_jpg.rf.260b461f0b2b09aa472eec1fbbb4e58f.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000985,images/srcB_651_jpg.rf.4d0463f691e810774814880349e5359d.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000986,images/srcB_652_jpg.rf.c9c5cc142b93cb3f7ba46de2e6260980.jpg,cá chiên,seafood,640,640,web_scrape_B,True,verified
+VNFOOD_000987,images/srcB_652_jpg.rf.dc87d32e9cd4edfdfffc3bb3572ee06e.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000988,images/srcB_656_jpg.rf.33c0d759b8450c5579cabdd991804351.jpg,bánh căn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000989,images/srcB_656_jpg.rf.518c49eae2dc452542c7ba06ac2b026d.jpg,bánh mì,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000990,images/srcB_656_jpg.rf.ec9ca186d4444f9b14dbcce4d2e68c02.jpg,bánh cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000991,images/srcB_657_jpg.rf.2255f1e53cb875ff8adcf30c274dc5e0.jpg,bánh tráng,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000992,images/srcB_657_jpg.rf.9f7c777a680249ca40e85a5b5dd98692.jpg,bún mắm,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000993,images/srcB_658_jpg.rf.af705bafe67bcc1d2a90fc1b694d9f25.jpg,bánh tét,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000994,images/srcB_659_jpg.rf.0fe5c63575e0484223b5a5fb6c75359b.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000995,images/srcB_659_jpg.rf.1a6f0fd0d4e34cd8bd865f569c19bdc9.jpg,bún bò Huế,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000996,images/srcB_659_jpg.rf.28d294c90166edb9e3be0a8f87ffc74a.jpg,cháo lòng,soup,640,640,web_scrape_B,True,verified
+VNFOOD_000997,images/srcB_661_jpg.rf.89d7d224b5f684242fc68dc8ea55eb7f.jpg,bánh bột lọc,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_000998,images/srcB_661_jpg.rf.95d3062515d1d7cb944ea17751fb4c69.jpg,bún riêu,noodle_dish,640,640,web_scrape_B,True,verified
+VNFOOD_000999,images/srcB_662_jpg.rf.831353348d6b6fbcbbf47eddbb4e41fd.jpg,gỏi cuốn,bread_and_pastry,640,640,web_scrape_B,True,verified
+VNFOOD_001000,images/srcB_664_jpg.rf.14fd8432bf2684e10b8b007965ca4650.jpg,cơm tấm,rice_dish,640,640,web_scrape_B,True,verified
